@@ -1,0 +1,541 @@
+:root {
+    --bluePrimary: #0A2449;
+    --blueLight: #3b506d;
+    --darkGrey: #7C7A7D;
+    --lightPrimaryGrey: #D2D2D2;
+    --primaryBlack: #1E1E1E;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: barlow;
+    font-size: 100%;
+}
+
+/* Header Section Design */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 1.36rem 0 0 3.13rem;
+}
+
+.nav {
+    margin-right: 2.812rem;
+    padding: 0.313rem;
+    width: 48.75rem;
+}
+
+.nav .nav-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.4rem;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: var(--blueLight);
+    font-size: 0.94rem;
+    font-family: "Barlow", serif;
+    font-weight: 600;
+}
+
+.nav-items>li>a:hover {
+    animation: NavTabs 0.7s ease-in-out forwards;
+}
+
+.nav-items li {
+    list-style: none;
+    position: relative;
+    padding: 0rem;
+}
+
+.nav-items button {
+    color: var(--lightPrimaryGrey);
+    font-size: 1rem;
+    background-color: var(--blueLight);
+    padding: 0.5rem 0.8rem;
+    border-radius: 1.3rem;
+    cursor: pointer;
+    border-style: none;
+    opacity: 0.9;
+}
+
+.nav-items button:hover {
+    animation: getStartedBtn 0.7s ease-in-out forwards;
+}
+
+.dropdown {
+    display: none;
+}
+
+.nav-items>li:hover .dropdown {
+    display: block;
+    position: absolute;
+    background-color: var(--blueLight);
+    top: 1.5rem;
+    left: -.5rem;
+    border-radius: 1rem;
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+    width: 248px;
+    animation: NavTabs 0.7s ease-in-out forwards;
+}
+
+.dropdown>ul>li>a {
+    font-weight: 500;
+    color: var(--lightPrimaryGrey);
+}
+
+.dropdown>ul>li {
+    padding: 0.7rem;
+}
+
+.dropdown>ul>li>a:hover {
+    color: var(--bluePrimary);
+    font-weight: 500;
+}
+
+@keyframes NavTabs {
+    from {
+        font-size: 1rem;
+    }
+
+    to {
+        text-decoration: none;
+        color: var(--bluePrimary);
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+}
+
+@keyframes getStartedBtn {
+    from {
+        background-color: var(--blueLight);
+    }
+
+    to {
+        background-color: var(--bluePrimary);
+        font-size: 1.1rem;
+        opacity: 1;
+    }
+}
+
+/* Header Section Design End */
+
+/* Styling of hero section */
+.hero-section {
+    display: flex;
+    padding: 7.63rem 0 3.63rem 3.13rem;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 3rem; */
+    /* height: 25.25rem; */
+    /* border: 1px solid black; */
+}
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.headline>h1 {
+    font-family: "Barlow", serif;
+    font-weight: 700;
+    font-size: 5.94rem;
+    font-style: italic;
+    font-weight: 900;
+    color: var(--bluePrimary);
+    line-height: 118%;
+    cursor: context-menu;
+}
+
+.headline>h1:hover {
+    animation: gradnt infinite ease-in forwards;
+}
+
+@keyframes gradnt {
+
+    form {
+        color: var(--bluePrimary);
+    }
+
+    to {
+        background-image: radial-gradient(#0A2449, #abceff, #d9d9d9);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        -webkit-mask-imagae: radial-gradient(#0A2449, #abceff, #d9d9d9);
+        mask-imagae: radial-gradient(#0A2449, #abceff, #d9d9d9);
+        -webkit-mask-composite: source-in;
+        mask-composite: exclude;
+    }
+}
+
+.headline>p {
+    font-size: 1.75rem;
+    font-family: "Barlow", serif;
+    font-weight: 600;
+    color: var(--blueLight);
+    letter-spacing: 7%;
+    cursor: context-menu;
+}
+
+.headline>.headlineBtns>#viewproject {
+    margin-left: 0.8rem;
+    padding: 0.5rem 0.55rem 0.5rem 0.55rem;
+    border-radius: 6.25rem;
+    border-style: none;
+    background-color: var(--darkGrey);
+    color: var(--lightPrimaryGrey);
+    cursor: pointer;
+    font-size: 0.65rem;
+    margin-top: 0.5rem;
+    width: 7.25rem;
+    height: 2rem;
+}
+
+.headline>.headlineBtns>#getStarted {
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    border-radius: 6.25rem;
+    border-style: none;
+    background-color: var(--blueLight);
+    color: var(--lightPrimaryGrey);
+    cursor: pointer;
+    font-size: 0.65rem;
+    margin-top: 0.5rem;
+    width: 7.25rem;
+    height: 2rem;
+}
+
+.headline>.headlineBtns>#getStarted:hover {
+    animation: headlineBtns 0.7s ease-in-out forwards;
+}
+
+.rectangles {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 250px;
+
+}
+
+.div1 {
+    background-color: var(--bluePrimary);
+    width: 6rem;
+    height: 2.5rem;
+}
+
+.div2 {
+    background-color: var(--darkGrey);
+    width: 4.7rem;
+    height: 2.5rem;
+}
+
+.div3 {
+    background-color: var(--blueLight);
+    width: 2.8rem;
+    height: 2.5rem;
+}
+
+.div4 {
+    background-color: var(--darkGrey);
+    width: 4.7rem;
+    height: 2.5rem;
+}
+
+.div5 {
+    background-color: var(--bluePrimary);
+    width: 6rem;
+    height: 2.5rem;
+}
+
+@keyframes headlineBtns {
+    from {
+        color: var(--lightPrimaryGrey);
+    }
+
+    to {
+        background-color: var(--bluePrimary);
+        font-weight: 500;
+    }
+}
+
+/* Styling of hero section end */
+
+.line {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 1.5rem;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+
+/* Styling Services Section */
+.servicessSectn {
+    padding: 3.63rem 0 2.63rem 3.13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    /* height: 200px; */
+    /* border: 1px solid black; */
+}
+
+.services>h1 {
+    text-align: center;
+    font-family: "Barlow", serif;
+    font-weight: 600;
+    font-size: 3.13;
+    color: var(--primaryBlack);
+}
+
+.services>h1>span {
+    color: var(--blueLight);
+    font-family: "Barlow", serif;
+    font-weight: 800;
+}
+
+.servicePara {
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.services>.para1 {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.services>.para2 {
+    text-align: center;
+}
+
+.servicessSectn>.serviceCards {
+    /* padding: 3.rem 0 8.63rem 3.13rem;  */
+    /* border: 1px solid black; */
+    margin-right: 3.13rem;
+    margin-top: 3.13rem;
+    height: 32rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+    padding: 0.8rem 1.5rem 0 0;
+}
+
+.card {
+    width: 20.56rem;
+    height: 13.63rem;
+    border: 1px solid var(--lightPrimaryGrey);
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 24px 0px #55555515;
+    /* border: 1px solid black; */
+
+}
+
+.card:hover {
+    animation: cardAnim 0.5s ease-in-out 1 forwards;
+}
+
+@keyframes cardAnim {
+    form {
+        width: 20.56rem;
+    }
+
+    to {
+        transform: scaleX(1.1);
+        -webkit-transform: scaleX(1.1);
+        -ms-transform: scaleX(1.1);
+        box-shadow: 0px 4px 15px 5px #3666AB60;
+    }
+}
+
+.card>h3 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.4rem;
+    background-color: var(--lightPrimaryGrey);
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-size: 1.13rem;
+}
+
+.card>h3>img {
+    width: 15%;
+    height: 90%;
+    margin-right: .7rem;
+}
+
+.card>p {
+    font-family: "Barlow", serif;
+    font-weight: 300;
+    /* border: 1px solid black; */
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+/* Styling services section end */
+
+
+/* Styling of our team section */
+
+.ourTameSectn {
+    padding: 3.63rem 0 2.63rem 3.13rem;
+    display: flex;
+    flex-direction: column;
+    /* height: 500px; */
+}
+
+.ourTameSectn>h1>span {
+    color: var(--primaryBlack);
+}
+
+.ourTameSectn>h1 {
+    color: var(--blueLight);
+    text-align: center;
+}
+
+.teamprofile {
+    margin-right: 3.13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* padding: 2rem 2rem 4rem 2rem; */
+    /* height:600px; */
+    padding: 1.5rem 1.5rem 0 0;
+    /* border: 1px solid black; */
+}
+
+.wrap1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrap2 {
+    display: flex;
+    padding-top: 2.63rem;
+    justify-content: space-evenly;
+}
+
+.card-profile {
+    width: 250px;
+    height: 300px;
+    transform-style: preserve-3d;
+    /* border: 1px solid black; */
+    transition: all 0.5s ease;
+    perspective: 1000px;
+    position: relative;
+    backface-visibility: hidden;
+}
+
+.card-profile:hover {
+    transform: rotateY(180deg);
+}
+
+.profile {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--blueLight);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: all 0.9s ease;
+}
+
+.backprfile {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 1px solid var(--blueLight);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    box-shadow: 0px 4px 15px 5px #3666AB60;
+
+}
+
+.backprfile>p {
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.backprfile>h3 {
+    font-family: "Barlow", serif;
+    font-weight: 800;
+    font-size: 1.13rem;
+    color: var(--blueLight);
+}
+
+.profileimg {
+    width: 200px;
+    height: 192px;
+    position: relative;
+    /* border: 1px solid black; */
+    margin-top: 0.5rem;
+}
+
+.profileimg>#dots {
+    width: 90%;
+    position: absolute;
+    left: 7px;
+}
+
+.profileimg>#haris {
+    width: 70%;
+    position: absolute;
+    left: 28px;
+    top: 1rem;
+}
+
+.profileinfo>h3 {
+    font-family: "Barlow", serif;
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--blueLight);
+    text-align: center;
+}
+
+.profileinfo>h5 {
+    text-align: center;
+    color: var(--bluePrimary);
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-size: 1.13rem;
+    margin-top: 0.7rem;
+}
+
+/* Styling of our team section end */
