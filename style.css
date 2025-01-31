@@ -289,7 +289,7 @@ body {
 
 /* Styling Services Section */
 .servicessSectn {
-    padding: 3.63rem 0 2.63rem 3.13rem;
+    padding: 3.63rem 0 2.63rem 3.4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -339,10 +339,9 @@ body {
     margin-top: 3.13rem;
     height: 32rem;
     display: flex;
-    justify-content: space-between;
+    gap: 60px 125px;
     flex-wrap: wrap;
     align-content: space-between;
-    padding: 0.8rem 1.5rem 0 0;
 }
 
 .card {
@@ -539,3 +538,20 @@ body {
 }
 
 /* Styling of our team section end */
+
+/* Styling of prouduct section */
+
+.productsectn{
+    padding: 3.63rem 0 2.63rem 3.13rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+.productsectn>h1{
+    text-align: center;
+    font-family: "Barlow", serif;
+    font-weight: 800;
+    color: var(--blueLight);
+}
+
+/* Styling of prouduct section end */
