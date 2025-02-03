@@ -33,16 +33,14 @@ body {
 .nav {
     margin-right: 2.812rem;
     padding: 0.313rem;
-    width: 48.75rem;
+
 }
 
 .nav .nav-items {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 0.4rem;
+    gap: 30px;
 }
-
 .nav-items a {
     text-decoration: none;
     color: var(--blueLight);
@@ -50,85 +48,80 @@ body {
     font-family: "Barlow", serif;
     font-weight: 600;
 }
-
-.nav-items>li>a:hover {
-    animation: NavTabs 0.7s ease-in-out forwards;
+.nav-items>li{
+    transition: all 0.5s ease-out;
 }
-
+.nav-items>li:hover {
+    transform: scale(1.1);
+    transition: all 0.7s ease;
+}
+.nav-items>li>a:hover{
+    color: var(--bluePrimary);
+    font-weight: bold;
+    transition: all 0.7s ease;
+}
 .nav-items li {
     list-style: none;
     position: relative;
     padding: 0rem;
 }
 
-.nav-items button {
+.nav-items>#getStarted {
+    width: 120px;
+    height: 35px;
     color: var(--lightPrimaryGrey);
-    font-size: 1rem;
+    font-size: 0.95rem;
     background-color: var(--blueLight);
     padding: 0.5rem 0.8rem;
     border-radius: 1.3rem;
     cursor: pointer;
     border-style: none;
     opacity: 0.9;
+    transition: all 0.5s ease-out;
+}
+.nav-items>#getStarted:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    background-color: var(--bluePrimary);
+    opacity: 1;
 }
 
-.nav-items button:hover {
-    animation: getStartedBtn 0.7s ease-in-out forwards;
+.down{
+    cursor: pointer;
+    margin-left: -1.3rem;
+    position: relative;
+    opacity: 0.7;
 }
-
-.dropdown {
+.down:hover{
+    opacity: 1;
+}
+.dropdown{
     display: none;
-}
+} 
 
-.nav-items>li:hover .dropdown {
+.nav-items>.down:hover .dropdown {
     display: block;
     position: absolute;
     background-color: var(--blueLight);
-    top: 1.5rem;
-    left: -.5rem;
+    top: 1.7rem;
+    left: -5.5rem;
     border-radius: 1rem;
     padding: 0.2rem 0.2rem 0.2rem 0.2rem;
     width: 248px;
-    animation: NavTabs 0.7s ease-in-out forwards;
 }
 
-.dropdown>ul>li>a {
+.dropdown a {
     font-weight: 500;
     color: var(--lightPrimaryGrey);
 }
 
-.dropdown>ul>li {
+.dropdown li {
     padding: 0.7rem;
 }
 
-.dropdown>ul>li>a:hover {
+.dropdown a:hover {
     color: var(--bluePrimary);
     font-weight: 500;
-}
-
-@keyframes NavTabs {
-    from {
-        font-size: 1rem;
-    }
-
-    to {
-        text-decoration: none;
-        color: var(--bluePrimary);
-        font-size: 1.1rem;
-        font-weight: bold;
-    }
-}
-
-@keyframes getStartedBtn {
-    from {
-        background-color: var(--blueLight);
-    }
-
-    to {
-        background-color: var(--bluePrimary);
-        font-size: 1.1rem;
-        opacity: 1;
-    }
 }
 
 /* Header Section Design End */
