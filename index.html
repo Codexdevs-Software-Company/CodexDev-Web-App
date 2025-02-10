@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codexdev</title>
+    <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,246 +13,253 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- Header-Section -->
-
-
-    <header class="header">
-        <div class="logo"><img src="./images/LOGO 1.png" alt="Codex logo"></div>
-        <nav class="nav">
-            <ul class="nav-items">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">PORTFOLIO</a></li>
-                <li><a href="#">OUR TEAM</a></li>
-                <li><a href="#">SERVICES</a> </li>
-                <!-- <div id="down-icon"> -->
-                        <i class="fa-solid fa-caret-down down">
-                            <div class="dropdown">
-                                <ul>
-                                    <li><a href="#">SOFTWARE DEVELOPMENT</li>
-                                    <li><a href="#">WEB DEVELOPMENT</a></li>
-                                    <li><a href="#">APP DEVELOPMENT</a></li>
-                                    <li><a href="#">UI/UX DESIGNING</a></li>
-                                    <li><a href="#">GRAPHIC DESIGNING</a></li>
-                                    <li><a href="#">CLOUD SERVICES</a></li>
-                                </ul>
-                            </div>
-                        </i>
-                
-                <!-- </div> -->
-                <li><a href="#">PRODUCTS</a></li>
-                <button type="button" id="getStarted">Get Started</button>
-            </ul>
-        </nav>
-    </header>
+    <my-header></my-header>
+    <!-- <header class="header" id="top">
+    
+    </header> -->
 
     <!-- Header-Section-End -->
 
 
     <!-- Hero Section -->
+    <main>
+        <div class="hero-section">
+            <div class="headline">
+                <h1>Your Vision,<br>Our Innovation
+                </h1>
+                <p>Driving Excellence in Technology and Business <br>Through Innovation, Strategy, and Vision.</p>
+                <div class="headlineBtns">
+                    <button type="button" id="getStarted">GET STARTED</button>
+                    <button type="button" id="viewproject">VIEW PROJECTS</button>
+                </div>
 
-    <div class="hero-section">
-        <div class="headline">
-            <h1>Your Vision,<br>Our Innovation
-            </h1>
-            <p>Driving Excellence in Technology and Business <br>Through Innovation, Strategy, and Vision.</p>
-            <div class="headlineBtns">
-                <button type="button" id="getStarted">GET STARTED</button>
-                <button type="button" id="viewproject">VIEW PROJECTS</button>
             </div>
-
-        </div>
-        <div class="rectangles">
-            <div class="div1"></div>
-            <div class="div2"></div>
-            <div class="div3"></div>
-            <div class="div4"></div>
-            <div class="div5"></div>
-        </div>
-    </div>
-    <!-- Hero Section end -->
-
-    <div class="line"></div>
-
-    <!-- Services Section -->
-
-    <div class="servicessSectn">
-        <div class="services">
-            <h1>WHAT WE <span>OFFER</span></h1>
-            <P class="servicePara para1">CodexDev crafts seamless, end-to-end solutions that transform challenges into
-            </P>
-            <p class="servicePara para2">opportunities, empowering you to redefine the future of technology.</P>
-        </div>
-        <div class="serviceCards">
-            <div class="card">
-                <h3><img src="./images/degitalmarketing.png" alt="Marketing icon"> SOCIAL MEDIA MARKETING</h3>
-                <p>Driving impactful connections and growth through strategic social media marketing.</p>
-            </div>
-            <div class="card">
-                <h3><img src="./images/appdev.png" alt="App-dev"> APP DEVELOPMENT</h3>
-                <p>Crafting seamless and scalable mobile apps that redefine possibilities.</p>
-            </div>
-            <div class="card">
-                <h3><img src="./images/webappdev.png" alt="Web development">WEB APP DEVELOPMENT</h3>
-                <p>Building dynamic, responsive, and visually appealing websites to enhance user experience and drive
-                    business success.</p>
-            </div>
-            <div class="card">
-                <h3><img src="./images/softwaredev.png" alt="Software development">SOFTWARE DEVELOPMENT</h3>
-                <p>Developing reliable, scalable, and innovative software solutions tailored to meet diverse business
-                    needs.</p>
-            </div>
-            <div class="card">
-                <h3><img src="./images/productdesign.png" alt="Product designing">PRDUCT DESIGNING</h3>
-                <p>Engaging and intuitive designs that enhance user experience and satisfaction.</p>
-            </div>
-            <div class="card">
-                <h3><img src="./images/cloud.png" alt="Cloud Services"> CLOUD SERVICES</h3>
-                <p>Empowering businesses with scalable, secure, and efficient cloud solutions to drive innovation and
-                    streamline operations</p>
+            <div class="rectangles">
+                <div class="div1"></div>
+                <div class="div2"></div>
+                <div class="div3"></div>
+                <div class="div4"></div>
+                <div class="div5"></div>
             </div>
         </div>
-    </div>
-    <!-- Services Section End -->
-    <div class="line"></div>
+        <!-- Hero Section end -->
 
-    <!-- Our team section -->
-    <div class="ourTameSectn">
-        <h1><span>OUR</span> TEAM</h1>
-        <div class="teamprofile">
-            <div class="wrap1">
-                <!-- card fliping animation -->
-                <div class="card-profile">
-                    <div class="profile">
-                        <div class="profileimg">
-                            <img src="./images/Group 6.png" alt="profile" id="dots">
-                            <img src="./images/haris.png" alt="fjg" id="haris">
+        <div class="line"></div>
+
+        <!-- Services Section -->
+
+        <div class="servicessSectn">
+            <div class="services">
+                <h1>WHAT WE <span>OFFER</span></h1>
+                <P class="servicePara para1">CodexDev crafts seamless, end-to-end solutions that transform challenges
+                    into
+                </P>
+                <p class="servicePara para2">opportunities, empowering you to redefine the future of technology.</P>
+            </div>
+            <div class="serviceCards">
+                <div class="card">
+                    <h3><img src="./images/degitalmarketing.png" alt="Marketing icon"> SOCIAL MEDIA MARKETING</h3>
+                    <p>Driving impactful connections and growth through strategic social media marketing.</p>
+                </div>
+                <div class="card">
+                    <h3><img src="./images/appdev.png" alt="App-dev"> APP DEVELOPMENT</h3>
+                    <p>Crafting seamless and scalable mobile apps that redefine possibilities.</p>
+                </div>
+                <div class="card">
+                    <h3><img src="./images/webappdev.png" alt="Web development">WEB APP DEVELOPMENT</h3>
+                    <p>Building dynamic, responsive, and visually appealing websites to enhance user experience and
+                        drive
+                        business success.</p>
+                </div>
+                <div class="card">
+                    <h3><img src="./images/softwaredev.png" alt="Software development">SOFTWARE DEVELOPMENT</h3>
+                    <p>Developing reliable, scalable, and innovative software solutions tailored to meet diverse
+                        business
+                        needs.</p>
+                </div>
+                <div class="card">
+                    <h3><img src="./images/productdesign.png" alt="Product designing">PRDUCT DESIGNING</h3>
+                    <p>Engaging and intuitive designs that enhance user experience and satisfaction.</p>
+                </div>
+                <div class="card">
+                    <h3><img src="./images/cloud.png" alt="Cloud Services"> CLOUD SERVICES</h3>
+                    <p>Empowering businesses with scalable, secure, and efficient cloud solutions to drive innovation
+                        and
+                        streamline operations</p>
+                </div>
+            </div>
+        </div>
+        <!-- Services Section End -->
+        <div class="line"></div>
+
+        <!-- Our team section -->
+        <div class="ourTameSectn" id="ourTameSectn">
+            <h1><span>OUR</span> TEAM</h1>
+            <div class="teamprofile">
+                <div class="wrap1">
+                    <!-- card fliping animation -->
+                    <div class="card-profile">
+                        <div class="profile">
+                            <div class="profileimg">
+                                <img src="./images/Group 6.png" alt="profile" id="dots">
+                                <img src="./images/haris.png" alt="fjg" id="haris">
+                            </div>
+                            <div class="profileinfo">
+                                <h3>MUHAMMAD HARIS</h3>
+                                <h5>Product Designer</h5>
+                            </div>
                         </div>
-                        <div class="profileinfo">
+
+                        <div class="backprfile">
                             <h3>MUHAMMAD HARIS</h3>
-                            <h5>Product Designer</h5>
+                            <p>Our Product designer designs user-focused solutions that blend creativity with
+                                functionality
+                                to drive success.</p>
+                            <img src="images/productdesign.png" alt="logo">
                         </div>
                     </div>
-
-                    <div class="backprfile">
-                        <h3>MUHAMMAD HARIS</h3>
-                        <p>Our Product designer designs user-focused solutions that blend creativity with functionality
-                            to drive success.</p>
-                        <img src="images/productdesign.png" alt="logo">
-                    </div>
-                </div>
-                <div class="card-profile">
-                    <div class="profile">
-                        <div class="profileimg">
-                            <img src="./images/Group 6.png" alt="profile" id="dots">
-                            <img src="./images/syedfasel.png" alt="fjg" id="haris">
+                    <div class="card-profile">
+                        <div class="profile">
+                            <div class="profileimg">
+                                <img src="./images/Group 6.png" alt="profile" id="dots">
+                                <img src="./images/syedfasel.png" alt="fjg" id="haris">
+                            </div>
+                            <div class="profileinfo">
+                                <h3>SAYED FAISAL</h3>
+                                <h5>FLUTTER DEVELOPER</h5>
+                            </div>
                         </div>
-                        <div class="profileinfo">
-                            <h3>SAYED FAISAL</h3>
-                            <h5>FLUTTER DEVELOPER</h5>
+                        <div class="backprfile">
+                            <h3>SYED FAISAL</h3>
+                            <p>Our senior Flutter developer crafts robust, high-performance apps that deliver seamless
+                                cross-platform experiences.</p>
+                            <img src="images/appdev.png" alt="logo">
                         </div>
                     </div>
-                    <div class="backprfile">
-                        <h3>SYED FAISAL</h3>
-                        <p>Our senior Flutter developer crafts robust, high-performance apps that deliver seamless
-                            cross-platform experiences.</p>
-                        <img src="images/appdev.png" alt="logo">
-                    </div>
-                </div>
-                <div class="card-profile">
-                    <div class="profile">
-                        <div class="profileimg">
-                            <img src="./images/Group 6.png" alt="profile" id="dots">
-                            <img src="./images/fawadibrar.png" alt="fjg" id="haris">
+                    <div class="card-profile">
+                        <div class="profile">
+                            <div class="profileimg">
+                                <img src="./images/Group 6.png" alt="profile" id="dots">
+                                <img src="./images/fawadibrar.png" alt="fjg" id="haris">
+                            </div>
+                            <div class="profileinfo">
+                                <h3>FAWAD IBRAR</h3>
+                                <h5>Product Designer</h5>
+                            </div>
                         </div>
-                        <div class="profileinfo">
+                        <div class="backprfile">
                             <h3>FAWAD IBRAR</h3>
-                            <h5>Product Designer</h5>
+                            <p>Our product designer creates user-centered, business-driven solutions that deliver
+                                impactful
+                                experiences</p>
+                            <img src="images/productdesign.png" alt="logo">
                         </div>
                     </div>
-                    <div class="backprfile">
-                        <h3>FAWAD IBRAR</h3>
-                        <p>Our product designer creates user-centered, business-driven solutions that deliver impactful
-                            experiences</p>
-                        <img src="images/productdesign.png" alt="logo">
+                    <div class="card-profile">
+                        <div class="profile">
+                            <div class="profileimg">
+                                <img src="./images/Group 6.png" alt="profile" id="dots">
+                                <img src="./images/shazaib.png" alt="fjg" id="haris">
+                            </div>
+                            <div class="profileinfo">
+                                <h3>SHAHZAIB ALI KHAN</h3>
+                                <h5>SOCIAL MEDIA MARKETING</h5>
+                            </div>
+                        </div>
+                        <div class="backprfile">
+                            <h3>MUHAMMAD HARIS</h3>
+                            <p>Our Product designer designs user-focused solutions that blend creativity with
+                                functionality
+                                to drive success."</p>
+                            <img src="images/productdesign.png" alt="logo">
+                        </div>
                     </div>
                 </div>
-                <div class="card-profile">
-                    <div class="profile">
-                        <div class="profileimg">
-                            <img src="./images/Group 6.png" alt="profile" id="dots">
-                            <img src="./images/shazaib.png" alt="fjg" id="haris">
-                        </div>
-                        <div class="profileinfo">
-                            <h3>SHAHZAIB ALI KHAN</h3>
-                            <h5>SOCIAL MEDIA MARKETING</h5>
-                        </div>
-                    </div>
-                    <div class="backprfile">
-                        <h3>MUHAMMAD HARIS</h3>
-                        <p>Our Product designer designs user-focused solutions that blend creativity with functionality
-                            to drive success."</p>
-                        <img src="images/productdesign.png" alt="logo">
-                    </div>
-                </div>
-            </div>
 
-            <div class="wrap2">
-                <div class="card-profile">
-                    <div class="profile">
-                        <div class="profileimg">
-                            <img src="./images/Group 6.png" alt="profile" id="dots">
-                            <img src="./images/faiz.png" alt="fjg" id="haris">
+                <div class="wrap2">
+                    <div class="card-profile">
+                        <div class="profile">
+                            <div class="profileimg">
+                                <img src="./images/Group 6.png" alt="profile" id="dots">
+                                <img src="./images/faiz.png" alt="fjg" id="haris">
+                            </div>
+                            <div class="profileinfo">
+                                <h3>FAIZ MUHAMMAD KHAN</h3>
+                                <h5>FLUTTER DEVELOPER</h5>
+                            </div>
                         </div>
-                        <div class="profileinfo">
+                        <div class="backprfile">
                             <h3>FAIZ MUHAMMAD KHAN</h3>
-                            <h5>FLUTTER DEVELOPER</h5>
+                            <p>Our Flutter developer builds cross-platform apps that deliver smooth, high-performance
+                                experiences across devices.</p>
+                            <img src="images/appdev.png" alt="logo">
                         </div>
                     </div>
-                    <div class="backprfile">
-                        <h3>FAIZ MUHAMMAD KHAN</h3>
-                        <p>Our Flutter developer builds cross-platform apps that deliver smooth, high-performance
-                            experiences across devices.</p>
-                        <img src="images/appdev.png" alt="logo">
-                    </div>
-                </div>
-                <div class="card-profile">
-                    <div class="profile">
-                        <div class="profileimg">
-                            <img src="./images/Group 6.png" alt="profile" id="dots">
-                            <img src="./images/Aftab.png" alt="fjg" id="haris">
+                    <div class="card-profile">
+                        <div class="profile">
+                            <div class="profileimg">
+                                <img src="./images/Group 6.png" alt="profile" id="dots">
+                                <img src="./images/Aftab.png" alt="fjg" id="haris">
+                            </div>
+                            <div class="profileinfo">
+                                <h3>MUHAMMAD AFTAB</h3>
+                                <h5>WEB DEVELOPER</h5>
+                            </div>
                         </div>
-                        <div class="profileinfo">
+                        <div class="backprfile">
                             <h3>MUHAMMAD AFTAB</h3>
-                            <h5>WEB DEVELOPER</h5>
+                            <p>Our web developer builds fast, responsive websites that deliver seamless user experiences
+                                and
+                                meet business goals</p>
+                            <img src="images/webappdev.png" alt="logo">
                         </div>
                     </div>
-                    <div class="backprfile">
-                        <h3>MUHAMMAD AFTAB</h3>
-                        <p>Our web developer builds fast, responsive websites that deliver seamless user experiences and
-                            meet business goals</p>
-                        <img src="images/webappdev.png" alt="logo">
-                    </div>
-                </div>
 
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Our team secton end -->
+        <!-- Our team secton end -->
 
-    <div class="line"></div>
-    <!-- product section start -->
+        <div class="line"></div>
+        <!-- product section start -->
 
-    <div class="productsectn">
-        <h1>PRODUCTS</h1>
-    </div>
+        <div class="productsectn" id="productsectn">
+            <h1>PRODUCTS</h1>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1"> </div>
+                    <div class="swiper-slide slide2"></div>
+                    <div class="swiper-slide slide3"></div>
+                </div>
 
-    <!-- product section end -->
-    <br><br><br>
+                <!-- Custom Pagination Dots -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Custom Navigation Arrows -->
+                <div class="custom-next"><img src="./images/right1.png" alt="righ-icon"></div>
+                <div class="custom-prev"><img src="./images/right.png" alt="left-icon"></div>
+            </div>
+
+
+        </div> <!--End of product section -->
+
+        <div class="line"></div>
+
+    </main>
+    <!-- Footer Section -->
+  
+    <my-footer></my-footer>
+
+    <!-- Fotter Section end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

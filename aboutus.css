@@ -1,0 +1,41 @@
+:root {
+    --bluePrimary: #0A2449;
+    --blueLight: #3b506d;
+    --darkGrey: #7C7A7D;
+    --lightPrimaryGrey: #D2D2D2;
+    --primaryBlack: #1E1E1E;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.aboutsctn{
+    display: flex;
+    padding: 5.63rem 0 8.63rem 3.13rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.75rem;
+}
+.aboutdesc{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.aboutdesc>h1{
+    font-family: "Barlow", serif;
+    font-weight: 900;
+    font-size: 3.94rem;  
+    color:var(--blueLight) ;
+}
+.aboutdesc>h1>span{
+    color: var(--bluePrimary)
+}
+.aboutdesc>p{
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    color: var(--bluePrimary);
+}
