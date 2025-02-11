@@ -124,3 +124,12 @@ class MyFooter extends HTMLElement {
 customElements.define("my-header", MyHeader)
 customElements.define("my-footer", MyFooter)
 // common header and footer js code end
+
+
+// Getstarted code
+
+let getStarted = document.querySelector('#getStarted')
+getStarted.addEventListener("click",()=>{
+    window.location.href = 'getstarted.html'
+})
+// Getstarted code end

@@ -1,0 +1,14 @@
+:root {
+    --bluePrimary: #0A2449;
+    --blueLight: #3b506d;
+    --darkGrey: #7C7A7D;
+    --lightPrimaryGrey: #D2D2D2;
+    --primaryBlack: #1E1E1E;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
