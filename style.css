@@ -16,7 +16,6 @@
 html {
     scroll-behavior: smooth;
 }
-
 body {
     font-family: barlow,serif;
     font-size: 100%;
@@ -30,9 +29,6 @@ body {
     align-items: center;
     top: 0;
     width: 100%;
-}
-my-hader{
-    display: block;
 }
 .logo {
     margin: 1.36rem 0 0 3.13rem;
@@ -531,6 +527,11 @@ my-hader{
     color: var(--blueLight);
 }
 /* Styling of slider */
+.swipper-container{
+    /* width: 80rem; */
+    position: relative;
+    overflow: visible;
+}
 .swiper {
     width: 70rem;
     height: 37.5rem;
@@ -538,7 +539,6 @@ my-hader{
     border-radius: 0.62rem;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
 }
 
 /* Slide Styling */
@@ -547,9 +547,7 @@ my-hader{
     justify-content: center;
     align-items: center;
     background-size: cover;
-
 }
-
 /* Custom Backgrounds */
 .slide1 {
     background: url("./images/couponshub.png") no-repeat 85px 100px ,
@@ -579,11 +577,11 @@ my-hader{
     color: var(--blueLight); 
     transition: 0.3s;
     cursor: pointer;
-    z-index: 10;
+    z-index:10;
 }
 
-.custom-prev { left: 0px; }
-.custom-next { right: 0px; }
+.custom-prev {left: 5.3rem; }
+.custom-next { right:5.3rem; }
 /* Custom Pagination Dots */
 .swiper-pagination-bullet {
     width: 0.94rem;
