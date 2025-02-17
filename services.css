@@ -1,0 +1,69 @@
+:root {
+    --bluePrimary: #0A2449;
+    --blueLight: #3b506d;
+    --darkGrey: #7C7A7D;
+    --lightPrimaryGrey: #D2D2D2;
+    --primaryBlack: #1E1E1E;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.servicedev {
+    padding: 4.63rem 1rem 3.63rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.softwrap{
+    width: 78rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+main .servicedev1 {
+    font-size: 3.125rem;
+    font-family: "Barlow", serif;
+    font-weight: 800;
+    color: var(--bluePrimary);
+}
+
+main .servicedev1 span {
+    font-family: "Barlow", serif;
+    font-weight: 600;
+    color: var(--primaryBlack);
+}
+main p{
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    text-align: justify;
+    color: var(--blueLight);
+}
+main ul li{
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    line-height: 2;
+    font-size: 1.25rem;
+    list-style: circle inside;
+    color: var(--blueLight);
+    margin-left: 1rem;
+}
+main ul li span{
+    color: var(--bluePrimary);
+    font-weight: 500;
+}
+main ul li::marker{
+    font-size: 1.5rem;
+    color: var(--blueLight);
+}
+main h2{
+    color: var(--bluePrimary);
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}

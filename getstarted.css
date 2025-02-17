@@ -7,8 +7,214 @@
 
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.converstnsctn {
+    padding: 5.63rem 0 8.63rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.converstnsctn>.shapefutre>h1 {
+    font-family: "Bangers", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 4.37rem;
+    width: 57.25rem;
+    color: var(--bluePrimary);
+    text-shadow: 0 0.4px 1px #00000025;
+}
+
+.converstnsctn>.shapefutre>h1>span {
+    color: var(--lightPrimaryGrey);
+}
+
+.line4 {
+    border-top: 3px solid var(--bluePrimary);
+    border-radius: 100px;
+    width: 60.25rem;
+    box-shadow: 0 4px 4px 0px #00000025;
+}
+
+.converstnsctn>.shapefuturedesc {
+    width: 60.25rem;
+}
+
+.converstnsctn>.shapefuturedesc>p {
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-size: 1.12rem;
+    letter-spacing: 7%;
+    text-align: center;
+    color: var(--primaryBlack);
+    line-height: 28px;
+}
+
+.converstnsctn>.contacts {
+    width: 60.25rem;
+    margin-top: 20px;
+}
+
+.contacts>address {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts>address>a {
+    text-decoration: none;
+    color: var(--darkGrey);
+    font-family: "Barlow", serif;
+    font-weight: 300;
+    font-size: 2.12rem;
+}
+
+.contactform1 {
+    display: flex;
+    justify-content: center;
+    padding: 5.63rem 0rem 8.63rem;
+}
+
+.contactform1>.formcard {
+    padding: 2rem 2rem;
+    border: 1px solid var(--bluePrimary);
+    border-radius: 0.75rem;
+    width: 73.75rem;
+    height: 44.56rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease-out;
+}
+
+.contactform1>.formcard:hover {
+    box-shadow: 0px 4px 15px 5px #3666AB60;
+    transform: scale(1.01);
+    transition: all 0.5s ease;
+}
+
+.contactform1>.formcard>h3 {
+    text-align: center;
+    font-family: "Barlow", serif;
+    font-weight: 300;
+    font-size: 2.125rem;
+    color: var(--primaryBlack);
+}
+
+.contactform1>.formcard>.formfileds {
+    width: 100%;
+    padding: 0 1rem;
+    margin-top: 80px;
+}
+
+.contactform1>.formcard>.formfileds>form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 140px;
+}
+
+form>.wrapfields {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 140px;
+}
+
+form>button {
+    width: 37.5rem;
+    height: 3.75;
+    background-color: var(--blueLight);
+    padding: 0.625rem 0.625rem;
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    color: var(--lightPrimaryGrey);
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 50px;
+    cursor: pointer;
+   transition: background-color 0.5s ease-out;;
+}
+form>button:hover{
+    background-color: var(--bluePrimary);
+    transition: background-color 0.5s ease-in;
+}
+form label {
+    font-family: "Barlow", serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--bluePrimary);
+}
+
+.formfileds>form>.wrapfields>.textfileds {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.labels {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.labels>#message {
+    background-color: #3B506D0D;
+}
+
+.formfileds>form>.wrapfields>.textfileds .fields {
+    width: 420px;
+    height: 54.5px;
+    padding: 0.5rem;
+    border: 1px solid var(--blueLight);
+    border-radius: 4px;
+    background-color: #3B506D0D;
+    outline: none;
+}
+
+.formfileds>form>.wrapfields .fields:focus {
+    outline: 1px solid var(--bluePrimary);
+}
+
+#subject {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 1.5rem;
+    color: var(--blueLight);
+    cursor: pointer;
+}
+
+.custom {
+    position: relative;
+}
+.customarrow{
+    position: absolute;
+    z-index: 1;
+    width: 14px;
+    height: 14px;
+    border-right: 2px solid var(--bluePrimary);
+    border-bottom: 2px solid var(--bluePrimary);
+    right: 25px;
+    top: 50%;
+    /* bottom: 50%; */
+    transform: rotate(45deg) translateY(-50%);
+    pointer-events: none;
+}
+.custom.active .customarrow{
+    right: 15px;
+    transform: rotate(225deg) translateY(-50%);
+}
+option {
+    appearance: none !important;
+    background: #3B506D0D !important;
+    padding: 2rem 0 !important;
 }

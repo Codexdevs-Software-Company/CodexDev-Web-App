@@ -31,18 +31,18 @@ class MyHeader extends HTMLElement {
             <ul class="nav-items">
                 <li><a href="./index.html">HOME</a></li>
                 <li><a href="./aboutus.html">ABOUT US</a></li>
-                <li><a href="#">PORTFOLIO</a></li>
                 <li><a href="./index.html#ourTameSectn">OUR TEAM</a></li>
-                <li><a href="#">SERVICES</a> </li>
+                <li><a href="./index.html#servicecrd">SERVICES</a> </li>
                 <i class="fa-solid fa-caret-down down">
                     <div class="dropdown">
                         <ul>
-                            <li><a href="#">SOFTWARE DEVELOPMENT</li>
-                            <li><a href="#">WEB DEVELOPMENT</a></li>
-                            <li><a href="#">APP DEVELOPMENT</a></li>
-                            <li><a href="#">UI/UX DESIGNING</a></li>
-                            <li><a href="#">GRAPHIC DESIGNING</a></li>
-                            <li><a href="#">CLOUD SERVICES</a></li>
+                           <li><a href="./services.html#social">SOCIAL MEDIA MARKETING</a></li>
+                            <li><a href="./services.html#softdev">SOFTWARE DEVELOPMENT</li>
+                            <li><a href="./services.html#webdev">WEB DEVELOPMENT</a></li>
+                            <li><a href="./services.html#appdev">APP DEVELOPMENT</a></li>
+                            <li><a href="./services.html#UI">UI/UX DESIGNING</a></li>
+                            <li><a href="./services.html#Graphs">GRAPHIC DESIGNING</a></li>
+                            <li><a href="./services.html#cloud">CLOUD SERVICES</a></li>
                         </ul>
                     </div>
                 </i>
@@ -77,12 +77,13 @@ class MyFooter extends HTMLElement {
                 </div>
                 <div class="servicelist">
                     <ul>
-                        <li>Web Development</li>
-                        <li>App Development</li>
-                        <li>UI UX Designing</li>
-                        <li>Cloud Services</li>
-                        <li>Graphic Designing</li>
-                        <li>Social Media Marketing</li>
+                    <li><a href="./services.html#social">Socail Media Marketing</a></li>
+                        <li><a href="./services.html#webdev">Web Development</a></li>
+                        <li><a href="./services.html#appdev">App Development</a></li>
+                        <li><a href="./services.html#UI">UI UX Designing</a></li>
+                        <li><a href="./services.html#cloud">Cloud Services</a></li>
+                        <li><a href="./services.html#Graphs">Graphic Designing</a></li>
+                        <li><a href="./services.html#softdev">Software Development</a></li>
                     </ul>
                 </div>
             </div>
@@ -129,7 +130,58 @@ customElements.define("my-footer", MyFooter)
 // Getstarted code
 
 let getStarted = document.querySelector('#getStarted')
-getStarted.addEventListener("click",()=>{
+getStarted.addEventListener("click", () => {
     window.location.href = 'getstarted.html'
 })
 // Getstarted code end
+
+
+const select = document.querySelector('.select1');
+const customArrow = document.querySelector('.custom');
+if (select && customArrow) {
+    select.addEventListener('click', function (event) {
+        event.stopPropagation();
+        customArrow.classList.toggle("active");
+    });
+}
+document.addEventListener("click", function (event) {
+    if (!customArrow.contains(event.target)) {
+        console.log("Selected");
+        customArrow.classList.remove("active");
+    }
+});
+
+const cards = document.querySelectorAll(".card");
+cards.forEach((card)=>{
+    if(cards[0]==card){
+        card.addEventListener('click',()=>{
+         window.location.href = './services.html#social';
+        })
+    }
+    else if(cards[1]==card){
+        card.addEventListener('click',()=>{
+         window.location.href = './services.html#appdev';
+        })
+    }
+    else if(cards[2]==card){
+        card.addEventListener('click',()=>{
+         window.location.href = './services.html#webdev';
+        })
+    }
+    else if(cards[3]==card){
+        card.addEventListener('click',()=>{
+         window.location.href = './services.html#softdev';
+        })
+    }
+    else if(cards[4]==card){
+        card.addEventListener('click',()=>{
+         window.location.href = './services.html#UI';
+        })
+    }
+    else if(cards[5]==card){
+        card.addEventListener('click',()=>{
+         window.location.href = './services.html#cloud';
+        })
+    }
+})
+

@@ -125,7 +125,7 @@ body {
 .nav-items>.down:hover  .dropdown{
  visibility: visible;
  opacity: 1;
- max-height: 250px;
+ max-height: 270px;
 }
 
 .dropdown a {
@@ -279,11 +279,10 @@ body {
 
 /* Styling Services Section */
 .servicessSectn {
-    padding: 3.63rem 0 2.63rem 3.4rem;
+    padding: 3.63rem 3.4rem 2.63rem 3.4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* border: 1px solid black; */
 }
 
 .services {
@@ -323,15 +322,13 @@ body {
 }
 
 .servicessSectn>.serviceCards {
-    /* padding: 3.rem 0 8.63rem 3.13rem;  */
-    /* border: 1px solid black; */
-    margin-right: 3.13rem;
-    margin-top: 3.13rem;
-    height: 32rem;
+    padding: 3em 0 0 0; 
+    width: 100%;
     display: flex;
-    gap: 3.75rem 7.81rem;
+    justify-content: space-between;
+    gap: 3.75rem 5.81rem;
     flex-wrap: wrap;
-    align-content: space-between;
+    align-items: center;
 }
 
 .card {
@@ -342,8 +339,8 @@ body {
     box-shadow: 0px 4px 24px 0px #55555515;
     /* border: 1px solid black; */
     transition: all 0.5s ease-out;
+    cursor: pointer;
 }
-
 .card:hover {
     transform: scaleX(1.1);
     -webkit-transform: scaleX(1.1);
@@ -373,7 +370,7 @@ body {
     font-family: "Barlow", serif;
     font-weight: 300;
     /* border: 1px solid black; */
-    justify-content: center;
+    text-align: center;
     margin-top: 2rem;
     padding: 1rem;
     text-align: center;
@@ -614,11 +611,13 @@ body {
     background-color: var(--bluePrimary);
     margin-bottom: 1.25rem;
     padding: 2.5rem 3.13rem 0 3.13rem;
-    gap: 2.5rem;
+    gap: 4.5rem;
 }
 .uperfooter{
     display: flex;
-    gap: 9.37rem;
+    gap: 10.37rem;
+    justify-content: space-between;
+    align-items: center;
 }
 .footer li{
     font-size: 1rem;
@@ -630,13 +629,11 @@ body {
     display: flex;
     flex-direction: column;
     width: 20rem;
-    height: 15.62rem;
-    /* border: 1px solid yellowgreen; */
-    gap: 1.25rem;
+    height: 16.62rem;
+    gap: 1.2rem;
     
 }
 .codexdiscp>.logo1{
-    /* border: 1px solid orange; */
     width: 100%;
 }
 .codexdiscp>.desc>p{
@@ -646,18 +643,15 @@ body {
     color: var(--lightPrimaryGrey);
     line-height: 1.8;
     letter-spacing: 1.5px;
-    /* border: 1px solid yellow; */
 }
 .footerservice{
     display: flex;
     flex-direction: column;
     width: 20rem;
     height: 15.62rem;
-    /* border: 1px solid yellowgreen; */
     gap: 20px;
 }
 .footerservice>.ourservices>h2{
-    /* border: 1px solid yellowgreen; */
     display: flex;
     justify-content: center;
     font-family: "Barlow", serif;
@@ -666,7 +660,6 @@ body {
     color:var(--lightPrimaryGrey);
 }
 .footerservice>.servicelist{
-    /* border: 1px solid yellowgreen; */
     display: flex;
     justify-content: center;
 }
@@ -675,7 +668,10 @@ body {
       flex-direction: column;
       gap: 1.125rem;
 }
-
+.footerservice>.servicelist>ul a{
+    text-decoration: none;
+    color: var(--lightPrimaryGrey) ;
+}
 .footertouch{
     display: flex;
     flex-direction: column;
@@ -743,6 +739,7 @@ body {
     padding-bottom: 0.6rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .copyright>p{
     font-family: "Barlow", serif;
