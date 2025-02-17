@@ -36,13 +36,13 @@ class MyHeader extends HTMLElement {
                 <i class="fa-solid fa-caret-down down">
                     <div class="dropdown">
                         <ul>
-                           <li><a href="./services.html#social">SOCIAL MEDIA MARKETING</a></li>
-                            <li><a href="./services.html#softdev">SOFTWARE DEVELOPMENT</li>
-                            <li><a href="./services.html#webdev">WEB DEVELOPMENT</a></li>
-                            <li><a href="./services.html#appdev">APP DEVELOPMENT</a></li>
-                            <li><a href="./services.html#UI">UI/UX DESIGNING</a></li>
-                            <li><a href="./services.html#Graphs">GRAPHIC DESIGNING</a></li>
-                            <li><a href="./services.html#cloud">CLOUD SERVICES</a></li>
+                           <li  class="service-link" ><a href="./services.html#social">SOCIAL MEDIA MARKETING</a></li>
+                            <li  class="service-link"><a href="./services.html#softdev">SOFTWARE DEVELOPMENT</li>
+                            <li  class="service-link"><a href="./services.html#webdev">WEB DEVELOPMENT</a></li>
+                            <li  class="service-link"><a href="./services.html#appdev">APP DEVELOPMENT</a></li>
+                            <li  class="service-link"><a href="./services.html#UI">UI/UX DESIGNING</a></li>
+                            <li  class="service-link"><a href="./services.html#Graphs">GRAPHIC DESIGNING</a></li>
+                            <li  class="service-link"><a href="./services.html#cloud">CLOUD SERVICES</a></li>
                         </ul>
                     </div>
                 </i>
@@ -77,13 +77,13 @@ class MyFooter extends HTMLElement {
                 </div>
                 <div class="servicelist">
                     <ul>
-                    <li><a href="./services.html#social">Socail Media Marketing</a></li>
-                        <li><a href="./services.html#webdev">Web Development</a></li>
-                        <li><a href="./services.html#appdev">App Development</a></li>
-                        <li><a href="./services.html#UI">UI UX Designing</a></li>
-                        <li><a href="./services.html#cloud">Cloud Services</a></li>
-                        <li><a href="./services.html#Graphs">Graphic Designing</a></li>
-                        <li><a href="./services.html#softdev">Software Development</a></li>
+                    <li  class="service-link"><a href="./services.html#social">Socail Media Marketing</a></li>
+                        <li  class="service-link"><a href="./services.html#webdev">Web Development</a></li>
+                        <li  class="service-link"><a href="./services.html#appdev">App Development</a></li>
+                        <li  class="service-link"><a href="./services.html#UI">UI UX Designing</a></li>
+                        <li  class="service-link"><a href="./services.html#cloud">Cloud Services</a></li>
+                        <li  class="service-link"><a href="./services.html#Graphs">Graphic Designing</a></li>
+                        <li  class="service-link"><a href="./services.html#softdev">Software Development</a></li>
                     </ul>
                 </div>
             </div>
@@ -151,37 +151,60 @@ document.addEventListener("click", function (event) {
     }
 });
 
-const cards = document.querySelectorAll(".card");
-cards.forEach((card)=>{
-    if(cards[0]==card){
-        card.addEventListener('click',()=>{
-         window.location.href = './services.html#social';
-        })
-    }
-    else if(cards[1]==card){
-        card.addEventListener('click',()=>{
-         window.location.href = './services.html#appdev';
-        })
-    }
-    else if(cards[2]==card){
-        card.addEventListener('click',()=>{
-         window.location.href = './services.html#webdev';
-        })
-    }
-    else if(cards[3]==card){
-        card.addEventListener('click',()=>{
-         window.location.href = './services.html#softdev';
-        })
-    }
-    else if(cards[4]==card){
-        card.addEventListener('click',()=>{
-         window.location.href = './services.html#UI';
-        })
-    }
-    else if(cards[5]==card){
-        card.addEventListener('click',()=>{
-         window.location.href = './services.html#cloud';
-        })
-    }
-})
+// const cards = document.querySelectorAll(".card");
+// cards.forEach((card)=>{
+//     if(cards[0]==card){
+//         card.addEventListener('click',()=>{
+//          window.location.href = './services.html#social';
+//         })
+//     }
+//     else if(cards[1]==card){
+//         card.addEventListener('click',()=>{
+//          window.location.href = './services.html#appdev';
+//         })
+//     }
+//     else if(cards[2]==card){
+//         card.addEventListener('click',()=>{
+//          window.location.href = './services.html#webdev';
+//         })
+//     }
+//     else if(cards[3]==card){
+//         card.addEventListener('click',()=>{
+//          window.location.href = './services.html#softdev';
+//         })
+//     }
+//     else if(cards[4]==card){
+//         card.addEventListener('click',()=>{
+//          window.location.href = './services.html#UI';
+//         })
+//     }
+//     else if(cards[5]==card){
+//         card.addEventListener('click',()=>{
+//          window.location.href = './services.html#cloud';
+//         })
+//     }
+// })
 
+document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('.servicedev');
+  
+    function showSection(serviceId) {
+      sections.forEach(section => section.classList.remove('active'));
+      const activeSection = document.getElementById(serviceId);
+      if (activeSection) activeSection.classList.add('active');
+    }
+  
+    // Check URL hash on page load
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      showSection(hash);
+    } else {
+      sections[0].classList.add('active'); // Default section
+    }
+  
+    // Handle hash changes when clicking links
+    window.addEventListener('hashchange', () => {
+      const newHash = window.location.hash.slice(1);
+      showSection(newHash);
+    });
+  });
