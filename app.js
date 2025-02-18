@@ -25,7 +25,7 @@ const swiper = new Swiper('.swiper', {
 class MyHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-         <header class="header" id="top">
+         <header class="header" >
         <div class="logo"><img src="./images/LOGO 1.png" alt="Codex logo"></div>
         <nav class="nav">
             <ul class="nav-items">
@@ -151,39 +151,7 @@ document.addEventListener("click", function (event) {
     }
 });
 
-// const cards = document.querySelectorAll(".card");
-// cards.forEach((card)=>{
-//     if(cards[0]==card){
-//         card.addEventListener('click',()=>{
-//          window.location.href = './services.html#social';
-//         })
-//     }
-//     else if(cards[1]==card){
-//         card.addEventListener('click',()=>{
-//          window.location.href = './services.html#appdev';
-//         })
-//     }
-//     else if(cards[2]==card){
-//         card.addEventListener('click',()=>{
-//          window.location.href = './services.html#webdev';
-//         })
-//     }
-//     else if(cards[3]==card){
-//         card.addEventListener('click',()=>{
-//          window.location.href = './services.html#softdev';
-//         })
-//     }
-//     else if(cards[4]==card){
-//         card.addEventListener('click',()=>{
-//          window.location.href = './services.html#UI';
-//         })
-//     }
-//     else if(cards[5]==card){
-//         card.addEventListener('click',()=>{
-//          window.location.href = './services.html#cloud';
-//         })
-//     }
-// })
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.servicedev');
