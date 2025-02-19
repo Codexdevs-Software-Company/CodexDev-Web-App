@@ -330,9 +330,16 @@ body {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 100px;
-    border: 1px solid black;
+
 }
 @media(max-width:768px){
+    .servicessSectn {
+        padding: 3.63rem 3.4rem 2.63rem 3.4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     .servicessSectn>.serviceCards{
         grid-template-columns: repeat(2,1fr);
     }
