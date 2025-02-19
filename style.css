@@ -33,7 +33,10 @@ body {
 .logo {
     margin: 1.36rem 0 0 3.13rem;
 }
-
+.logo>img{
+    width: 6.062rem;
+    height: 5.074rem;
+}
 .nav {
     margin-right: 2.812rem;
     padding: 0.313rem;
@@ -381,9 +384,11 @@ body {
 /* Styling of our team section */
 
 .ourTameSectn {
-    padding: 3.63rem 0 2.63rem 3.13rem;
+    padding: 3.63rem 3.4rem 2.63rem 3.4rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     /* height: 500px; */
 }
 
@@ -398,35 +403,29 @@ body {
 }
 
 .teamprofile {
-    margin-right: 3.13rem;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 1.9rem 1.5rem 0 0;
-}
-
-.wrap1 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.wrap2 {
-    display: flex;
-    padding-top: 2.63rem;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    padding: 1.9rem 0 0 0;
+    border: 1px solid black;
 }
 
 .card-profile {
     width: 250px;
     height: 300px;
-    transform-style: preserve-3d;
-    transition: all 0.5s ease;
     perspective: 1000px;
-    position: relative;
-    backface-visibility: hidden;
+   
 }
-
-.card-profile:hover {
+.inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+.card-profile:hover .inner{
     transform: rotateY(180deg);
 }
 
@@ -440,9 +439,17 @@ body {
     flex-direction: column;
     backface-visibility: hidden;
     position: absolute;
-    transition: all 0.9s ease;
 }
-
+.profile{
+    transform: rotateY(0deg);
+}
+.profile .tPic{
+    width: 150px;
+    height: 144px;
+    border: 1px solid var(--blueLight);
+    border-radius: 50%;
+    background-color: #fff;
+}
 .backprfile {
     width: 100%;
     height: 100%;
@@ -464,7 +471,7 @@ body {
     font-weight: 400;
     font-size: 1rem;
     text-align: center;
-    padding: 1rem;
+    padding: 1.4rem;
 }
 
 .backprfile>h3 {
@@ -475,7 +482,7 @@ body {
 }
 .backprfile>img{
     width: 18%;
-    height: 17%;
+    height: 15%;
     margin-top: 2rem;
 }
 .profileimg {
@@ -607,20 +614,22 @@ body {
 /* Footer Section Styling */
 
 .footer{
-    /* border: 1px solid black; */
+    /* border: 1px solid red; */
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     background-color: var(--bluePrimary);
-    margin-bottom: 1.25rem;
-    padding: 2.5rem 3.13rem 0 3.13rem;
-    gap: 4.5rem;
+    padding: 2.3rem 3.13rem 0 3.13rem;
+    gap: 1.3rem;
 }
 .uperfooter{
     display: flex;
     gap: 10.37rem;
     justify-content: space-between;
     align-items: center;
+    /* border: 1PX solid RED; */
+    /* height: 80%; */
 }
 .footer li{
     font-size: 1rem;
@@ -632,9 +641,9 @@ body {
     display: flex;
     flex-direction: column;
     width: 20rem;
-    height: 16.62rem;
+    height: 20.62rem;
     gap: 1.2rem;
-    
+    /* border: 1PX solid yellow; */
 }
 .codexdiscp>.logo1{
     width: 100%;
@@ -651,8 +660,9 @@ body {
     display: flex;
     flex-direction: column;
     width: 20rem;
-    height: 15.62rem;
+    height: 20.62rem;
     gap: 20px;
+    /* border: 1PX solid yellow; */
 }
 .footerservice>.ourservices>h2{
     display: flex;
@@ -679,7 +689,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 20rem;
-    height: 15.62rem;
+    height: 20.62rem;
+    /* border: 1PX solid yellow; */
 }
 
 .footertouch>.intouch{
@@ -687,7 +698,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.3125rem;
+    gap: 0.5125rem;
 }
 .footertouch>.intouch>h2{
     font-family: "Barlow", serif;
@@ -709,10 +720,9 @@ body {
 .footertouch>.footerloc{
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
-    gap: 0.3125rem;
+    margin-top: 1.2rem;
+    gap: 0.5125rem;
     /* border: 1px solid yellow; */
-    /* height: 100%; */
 }
 .footertouch>.footerloc>h4{
     font-family: "Barlow", serif;
@@ -720,6 +730,7 @@ body {
     font-size: 1.25rem;  
     color: var(--lightPrimaryGrey);
     margin-left: 3.4rem;
+    line-height: 20px;
 }
 .footertouch>.footerloc>p{
     font-family: "Barlow", serif;
@@ -728,21 +739,34 @@ body {
     color: var(--lightPrimaryGrey);
     margin-left: 3.4rem;
     margin-left: 3.4rem;
+    line-height: 20px;
 }
-.footertouch>span{
+/* .footertouch>span{
     position: relative;
 }
 .footertouch>span>a{
     position: absolute;
-    right: 0;
-    top: 1.25rem;
-}
+    right: 0.8rem;
+    top: 3.8rem;
+} */
+
 .bottomfooter{
     width: 100%;
     padding-bottom: 0.6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* border: 1px solid red; */
+}
+.bottomfooter>.socialstop{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+.socialstop>#backTop{
+    width: 65px;
+    height: 65px;
 }
 .copyright>p{
     font-family: "Barlow", serif;

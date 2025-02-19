@@ -33,7 +33,7 @@ class MyHeader extends HTMLElement {
                 <li><a href="./aboutus.html">ABOUT US</a></li>
                 <li><a href="./index.html#ourTameSectn">OUR TEAM</a></li>
                 <li><a href="./index.html#servicecrd">SERVICES</a> </li>
-                <i class="fa-solid fa-caret-down down">
+              <i class="fa-solid fa-angle-down down">
                     <div class="dropdown">
                         <ul>
                            <li  class="service-link" ><a href="./services.html#social">SOCIAL MEDIA MARKETING</a></li>
@@ -100,7 +100,6 @@ class MyFooter extends HTMLElement {
                     <h4>Location</h4>
                     <p>Shaheed Benazir Women University, STP, 3rd floor, Office #02</p>
                 </div>
-                <span><a href="#top"><img src="./images/UP ARROW.png" alt="uparrow"></a></span>
             </div>
         </div>
 
@@ -109,13 +108,16 @@ class MyFooter extends HTMLElement {
             <span class="copyright">
                 <p>Copyright © 2023 CODEXDEV</p>
             </span>
-            <span class="privacyplcy">
+            <span class="privacyplcy" style="cursor:pointer;">
                 <p>Privacy Policy</p>
             </span>
-            <span class="Terms">
+            <span class="Terms" style="cursor:pointer;">
                 <p>Terms of Service</p>
             </span>
-            <span class="socialicons"><img src="./images/social media pages.png" alt="socialicons"></span>
+            <div class="socialstop">
+              <span class="socialicons"><img src="./images/social media pages.png" alt="socialicons" style="cursor:pointer;"></span>
+              <span><a href="#"  id"backTop"><img src="./images/UP ARROW.png" alt="uparrow"></a></span>
+            </div>
         </div>
     </div>
           
@@ -126,6 +128,11 @@ customElements.define("my-header", MyHeader)
 customElements.define("my-footer", MyFooter)
 // common header and footer js code end
 
+// For blocking right click
+document.addEventListener("contextmenu",function(e){
+    e.preventDefault();
+},false)
+// For blocking right click end
 
 // Getstarted code
 
@@ -151,10 +158,9 @@ document.addEventListener("click", function (event) {
     }
 });
 
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.servicedev');
+    const backToTop = document.getElementById('backTop');
   
     function showSection(serviceId) {
       sections.forEach(section => section.classList.remove('active'));
@@ -162,17 +168,21 @@ document.addEventListener('DOMContentLoaded', function () {
       if (activeSection) activeSection.classList.add('active');
     }
   
-    // Check URL hash on page load
-    const hash = window.location.hash.slice(1);
-    if (hash) {
-      showSection(hash);
-    } else {
-      sections[0].classList.add('active'); // Default section
+    function loadSectionFromHash() {
+      const hash = window.location.hash.slice(1);
+      if (hash) {
+        showSection(hash);
+      }
     }
   
-    // Handle hash changes when clicking links
-    window.addEventListener('hashchange', () => {
-      const newHash = window.location.hash.slice(1);
-      showSection(newHash);
+    loadSectionFromHash();
+  
+    window.addEventListener('hashchange', loadSectionFromHash);
+  
+    // Handle Back to Top button
+    backToTop.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // No change to hash, so content remains visible
     });
   });
