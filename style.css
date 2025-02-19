@@ -330,7 +330,6 @@ body {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 100px;
-
 }
 @media(max-width:768px){
     .servicessSectn {
@@ -423,7 +422,7 @@ body {
     align-items: center;
     gap: 75px;
     padding: 1.9rem 0 0 0;
-    border: 1px solid black;
+
 }
 
 .card-profile {
