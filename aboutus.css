@@ -28,6 +28,7 @@
     font-family: "Barlow", serif;
     font-weight: 900;
     font-size: 3.94rem;  
+    font-style: italic;
     color:var(--blueLight) ;
 }
 .aboutdesc>h1>span{

@@ -129,9 +129,9 @@ customElements.define("my-footer", MyFooter)
 // common header and footer js code end
 
 // For blocking right click
-document.addEventListener("contextmenu",function(e){
-    e.preventDefault();
-},false)
+// document.addEventListener("contextmenu",function(e){
+//     e.preventDefault();
+// },false)
 // For blocking right click end
 
 // Getstarted code
