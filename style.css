@@ -554,9 +554,9 @@ body {
 }
 /* Styling of slider */
 .swipper-container{
-    /* width: 80rem; */
     position: relative;
-    overflow: visible;
+    overflow: hidden;
+    height: 43.75rem;
 }
 .swiper {
     width: 70rem;
@@ -566,32 +566,23 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+.swiper-pagination{
+    position: absolute;
+    bottom: 0;
+}
 
 /* Slide Styling */
 .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    background-repeat: no-repeat;
     background-size: cover;
+    object-fit: cover;
 }
-/* Custom Backgrounds */
-.slide1 {
-    background: url("./images/couponshub.png") no-repeat 85px 100px ,
-     url("./images/NOT.png") no-repeat 630px 100px;
-     background-color: #fff;
-
-}
-
-.slide2 {
-    background: url("./images/couponshub.png") no-repeat  85px 100px ,
-    url("./images/NOT.png") no-repeat  630px 100px;
-    background-color: #ABCEFF;
-}
-
-.slide3 {
-    background: url("./images/couponshub.png") no-repeat 85px 100px ,
-    url("./images/NOT.png") no-repeat  630px 100px;
-    background-color:#D2D2D2;
+.swiper-slide img{
+    width: 100%;   
 }
 
 /* Custom Navigation Buttons */
@@ -610,9 +601,10 @@ body {
 .custom-next { right:5.3rem; }
 /* Custom Pagination Dots */
 .swiper-pagination-bullet {
-    width: 0.94rem;
-    height: 0.94rem;
-    background-color: white;
+    width: 1rem;
+    height: 1rem;
+     background-color: var(--lightPrimaryGrey);
+    border: 2 px solid (var(--bluePrimary));
     opacity: 0.7;
 }
 
@@ -696,7 +688,17 @@ body {
 }
 .footerservice>.servicelist>ul a{
     text-decoration: none;
-    color: var(--lightPrimaryGrey) ;
+    color: var(--lightPrimaryGrey);
+    transition: all 0.5s linear;
+}
+.footerservice>.servicelist>ul li{
+    transition: all 0.5s linear;
+}
+.footerservice>.servicelist>ul li:hover{
+    list-style: none;
+}
+.footerservice>.servicelist>ul a:hover{
+    color: white;
 }
 .footertouch{
     display: flex;
@@ -754,15 +756,6 @@ body {
     margin-left: 3.4rem;
     line-height: 20px;
 }
-/* .footertouch>span{
-    position: relative;
-}
-.footertouch>span>a{
-    position: absolute;
-    right: 0.8rem;
-    top: 3.8rem;
-} */
-
 .bottomfooter{
     width: 100%;
     padding-bottom: 0.6rem;
@@ -777,16 +770,42 @@ body {
     justify-content: space-between;
     align-items: center;
  }
-.socialstop>#backTop{
-    width: 65px;
-    height: 65px;
-}
-.socialstop>:nth-child(2):hover{
-    background-color: var(--lightPrimaryGrey);
+.socialstop>.wrpsocial{
+    display: flex;
+ }
+.socialstop>.wrpsocial a{ 
+    border: 1px solid var(--lightPrimaryGrey);
     border-radius: 5px;
+    padding: 0.6rem;
+    margin-right: 1rem;
+    width: 2.19rem;
+    display: flex;
+    justify-content: center;
 }
-.socialstop>:nth-child(2) img{
-  color: var(--bluePrimary);
+.socialstop>.wrpsocial i{
+    color: var(--lightPrimaryGrey);
+    transition: all 0.3s linear;
+}
+.socialstop>.wrpsocial i:hover{
+    transform: scale(1.4);
+}
+ .socialstop>.bTop{
+    transition: all 0.5s ease-out;
+ }
+.socialstop>.bTop i{
+   font-size: 50px;
+   color: var(--lightPrimaryGrey);
+   transform: rotate(180deg);
+   transition: all 0.5s ease-out;
+}
+.socialstop>.bTop>a :hover {
+    background-color: var(--lightPrimaryGrey);
+    border-radius: 5px; 
+   
+}
+.socialstop>.bTop i:hover{
+    color: var(--bluePrimary);
+
 }
 .copyright>p{
     font-family: "Barlow", serif;

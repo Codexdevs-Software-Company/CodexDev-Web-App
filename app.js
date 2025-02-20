@@ -115,9 +115,13 @@ class MyFooter extends HTMLElement {
                 <p>Terms of Service</p>
             </span>
             <div class="socialstop">
-              <span class="socialicons"><img src="./images/social media pages.png" alt="socialicons" style="cursor:pointer;"></span>
-              <span><a href="#"  id"backTop"><img src="./images/UP ARROW.png" alt="uparrow"></a></span>
-            </div>
+             <div class="wrpsocial">
+                <a href= "#"> <i class="fa-brands  fa-facebook-f"></i></a>
+                <a href= "#"> <i class="fa-brands  fa-linkedin-in"></i></a>
+              </div>
+              <div class="bTop"><a href="#"  id"backTop"> <i class="fa-solid fa-angle-down down"></i></a>
+              </div>
+           </div>
         </div>
     </div>
           
@@ -161,28 +165,28 @@ document.addEventListener("click", function (event) {
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.servicedev');
     const backToTop = document.getElementById('backTop');
-  
+
     function showSection(serviceId) {
-      sections.forEach(section => section.classList.remove('active'));
-      const activeSection = document.getElementById(serviceId);
-      if (activeSection) activeSection.classList.add('active');
+        sections.forEach(section => section.classList.remove('active'));
+        const activeSection = document.getElementById(serviceId);
+        if (activeSection) activeSection.classList.add('active');
     }
-  
+
     function loadSectionFromHash() {
-      const hash = window.location.hash.slice(1);
-      if (hash) {
-        showSection(hash);
-      }
+        const hash = window.location.hash.slice(1);
+        if (hash) {
+            showSection(hash);
+        }
     }
-  
+
     loadSectionFromHash();
-  
+
     window.addEventListener('hashchange', loadSectionFromHash);
-  
+
     // Handle Back to Top button
     backToTop.addEventListener('click', function (e) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      // No change to hash, so content remains visible
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // No change to hash, so content remains visible
     });
-  });
+});
