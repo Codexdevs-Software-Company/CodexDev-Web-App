@@ -150,7 +150,7 @@ body {
 /* Styling of hero section */
 .hero-section {
     display: flex;
-    padding: 7.63rem 0 3.63rem 3.13rem;
+    padding: 4.63rem 0 3.63rem 3.13rem;
     justify-content: space-between;
     align-items: center;
     /* margin-top: 3rem; */
@@ -174,11 +174,11 @@ body {
     font-weight: 900;
     color: var(--bluePrimary);
     line-height: 118%;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .headline>h1 span:hover{
-    background: radial-gradient(circle, #0A2449,#abceff,#d9d9d9);
+    background: linear-gradient( #0A2449, #3B506D,#D2D2D2);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -233,7 +233,7 @@ body {
     align-items: flex-end;
     justify-content: space-between;
     height:15.62rem;
-
+    margin-bottom: 3.75rem;
 }
 
 .div1 {
