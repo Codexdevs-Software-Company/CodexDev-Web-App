@@ -15,6 +15,7 @@
 
 html {
     scroll-behavior: smooth;
+    cursor: context-menu;
 }
 body {
     font-family: barlow,serif;
@@ -173,9 +174,11 @@ body {
     font-weight: 900;
     color: var(--bluePrimary);
     line-height: 118%;
-    cursor: context-menu;
 }
-
+.headline>h1:hover{
+    
+    background: radial-gradient(800px circle, #0A2449,#abceff,#d9d9d9);
+}
 .headline>p {
     font-size: 1.75rem;
     font-family: "Barlow", serif;
@@ -559,7 +562,7 @@ body {
     height: 43.75rem;
 }
 .swiper {
-    width: 70rem;
+    width: 80rem;
     height: 37.5rem;
     margin-top: 2.37rem;
     border-radius: 0.62rem;
@@ -597,8 +600,8 @@ body {
     z-index:10;
 }
 
-.custom-prev {left: 5.3rem; }
-.custom-next { right:5.3rem; }
+.custom-prev {left: 0.76rem; }
+.custom-next { right:0.76rem; }
 /* Custom Pagination Dots */
 .swiper-pagination-bullet {
     width: 1rem;
@@ -724,6 +727,11 @@ body {
 .footertouch>.intouch>ul>li{
    margin-left : 3rem;
    padding-top: 0.5rem;
+   transition: all 0.5s ease-out;
+}
+.footertouch>.intouch>ul li:hover{
+   list-style: none;
+   color: white;
 }
 .line2{
     border-top: 1px solid #D2D2D260;

@@ -16,7 +16,9 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.custom-prev',
     },
     effect: 'fade', // Smooth fade transition (or use "slide" for normal)
+
 });
+
 // slider js code end
 
 // common header and footer js code
@@ -157,7 +159,6 @@ if (select && customArrow) {
 }
 document.addEventListener("click", function (event) {
     if (!customArrow.contains(event.target)) {
-        console.log("Selected");
         customArrow.classList.remove("active");
     }
 });
@@ -189,4 +190,11 @@ document.addEventListener('DOMContentLoaded', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         // No change to hash, so content remains visible
     });
+});
+const swiperPause = document.querySelector('.swiper');
+swiperPause.addEventListener('mouseenter',()=>{
+   swiper.autoplay.stop();
+});
+swiperPause.addEventListener('mouseleave',()=>{
+   swiper.autoplay.start();
 });
