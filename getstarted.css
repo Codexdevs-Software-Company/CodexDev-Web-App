@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 2.5re;
 }
 
 .converstnsctn>.shapefutre>h1 {
@@ -28,7 +28,7 @@
     font-size: 4.37rem;
     width: 57.25rem;
     color: var(--bluePrimary);
-    text-shadow: 0 0.4px 1px #00000025;
+    text-shadow: 0 0 4px 1px #00000025;
 }
 
 .converstnsctn>.shapefutre>h1>span {

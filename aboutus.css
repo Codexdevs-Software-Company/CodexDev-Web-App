@@ -22,7 +22,7 @@
 .aboutdesc{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
 }
 .aboutdesc>h1{
     font-family: "Barlow", serif;

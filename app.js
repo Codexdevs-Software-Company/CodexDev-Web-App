@@ -49,7 +49,7 @@ class MyHeader extends HTMLElement {
                     </div>
                 </i>
                 <li><a href="./index.html#productsectn">PRODUCTS</a></li>
-                <button type="button" id="getStarted">Get Started</button>
+                <button type="button" id="getStarted" class="getStarted">Get Started</button>
             </ul>
         </nav>
         
@@ -132,6 +132,25 @@ class MyFooter extends HTMLElement {
 }
 customElements.define("my-header", MyHeader)
 customElements.define("my-footer", MyFooter)
+
+
+const headerLogo = document.querySelector(".logo");
+headerLogo.style.cursor = "pointer";
+headerLogo.addEventListener("click",()=>{
+    location.href = "index.html";
+})
+
+
+// Getstarted code
+
+const getStarted = document.querySelectorAll("#getStarted");
+getStarted.forEach((btn)=>{
+    btn.addEventListener("click",()=>{
+
+        location.href = "getstarted.html";
+    })
+});
+// Getstarted code end
 // common header and footer js code end
 
 // For blocking right click
@@ -140,13 +159,6 @@ customElements.define("my-footer", MyFooter)
 // },false)
 // For blocking right click end
 
-// Getstarted code
-
-let getStarted = document.querySelector('#getStarted')
-getStarted.addEventListener("click", () => {
-    window.location.href = 'getstarted.html'
-})
-// Getstarted code end
 
 
 const select = document.querySelector('.select1');
@@ -159,6 +171,7 @@ if (select && customArrow) {
 }
 document.addEventListener("click", function (event) {
     if (!customArrow.contains(event.target)) {
+        console.log('slelcted');
         customArrow.classList.remove("active");
     }
 });

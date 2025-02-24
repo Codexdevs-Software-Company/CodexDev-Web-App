@@ -129,7 +129,7 @@ body {
 .nav-items>.down:hover  .dropdown{
  visibility: visible;
  opacity: 1;
- max-height: 270px;
+ max-height: 16.875rem;
 }
 
 .dropdown a {
@@ -174,15 +174,20 @@ body {
     font-weight: 900;
     color: var(--bluePrimary);
     line-height: 118%;
-    transition: all 0.3s ease-in-out;
 }
-
+.headline>h1 span{
+    display: inline-block;
+    letter-spacing: 0.125rem;
+    transition: backgound-position 0.3s linear;
+}
 .headline>h1 span:hover{
-    background: linear-gradient( #0A2449, #3B506D,#D2D2D2);
+    background: linear-gradient(#0A2449, #3B506D,#D2D2D2);
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent;
+     color: transparent;
 }
+
 .headline>p {
     font-size: 1.75rem;
     font-family: "Barlow", serif;
@@ -283,7 +288,7 @@ body {
     margin-left: 3.12rem;
     margin-right: 3.12rem;
     margin-top: 1.5rem;
-    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    border-top: 0.125 solid rgba(0, 0, 0, 0.1);
 }
 
 
@@ -336,16 +341,9 @@ body {
     padding: 3em 0 0 0; 
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 100px;
+    gap: 6.25rem;
 }
 @media(max-width:768px){
-    .servicessSectn {
-        padding: 3.63rem 3.4rem 2.63rem 3.4rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
     .servicessSectn>.serviceCards{
         grid-template-columns: repeat(2,1fr);
     }
@@ -358,16 +356,16 @@ body {
 .card {
     width: 21.56rem;
     height: 13.63rem;
-    border: 1px solid var(--lightPrimaryGrey);
+    border: 0.0625rem solid var(--lightPrimaryGrey);
     border-radius: 0.5rem;
-    box-shadow: 0px 4px 24px 0px #55555515;
+    box-shadow: 0 0.25rem 1.5rem 0 #55555515;
     transition: all 0.5s ease-out;
 }
 .card:hover {
     transform: scaleX(1.1);
     -webkit-transform: scaleX(1.1);
     -ms-transform: scaleX(1.1);
-    box-shadow: 0px 4px 15px 5px #3666AB60;
+    box-shadow: 0 0.25rem 0.938rem 0.313rem #3666AB60;
     transition: all 0.5s ease;
 }
 
@@ -409,7 +407,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* height: 500px; */
 }
 
 .ourTameSectn>h1>span {
@@ -427,15 +424,15 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 75px;
+    gap: 4.689rem;
     padding: 1.9rem 0 0 0;
 
 }
 
 .card-profile {
-    width: 250px;
-    height: 300px;
-    perspective: 1000px;
+    width: 15.625rem;
+    height: 18.75rem;
+    perspective: 62.5rem;
    
 }
 .inner{
@@ -464,8 +461,8 @@ body {
     transform: rotateY(0deg);
 }
 .profile .tPic{
-    width: 150px;
-    height: 144px;
+    width: 9.375rem;
+    height: 9rem;
     border: 1px solid var(--blueLight);
     border-radius: 50%;
     background-color: #fff;
@@ -482,7 +479,7 @@ body {
     justify-content: center;
     backface-visibility: hidden;
     transform: rotateY(180deg);
-    box-shadow: 0px 4px 15px 5px #3666AB60;
+    box-shadow: 0 0.25rem 0.938rem 0.313rem #3666AB60;
 
 }
 
@@ -515,7 +512,7 @@ body {
 .profileimg>#dots {
     width: 90%;
     position: absolute;
-    left: 7px;
+    left: 0.438rem;
 }
 
 .profileimg>#haris {
@@ -571,7 +568,7 @@ body {
     margin-top: 2.37rem;
     border-radius: 0.62rem;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
 }
 .swiper-pagination{
     position: absolute;
@@ -611,7 +608,7 @@ body {
     width: 1rem;
     height: 1rem;
      background-color: var(--lightPrimaryGrey);
-    border: 2 px solid (var(--bluePrimary));
+    border: 0.125rem solid (var(--bluePrimary));
     opacity: 0.7;
 }
 
@@ -640,8 +637,6 @@ body {
     gap: 10.37rem;
     justify-content: space-between;
     align-items: center;
-    /* border: 1PX solid RED; */
-    /* height: 80%; */
 }
 .footer li{
     font-size: 1rem;
@@ -655,7 +650,6 @@ body {
     width: 20rem;
     height: 20.62rem;
     gap: 1.2rem;
-    /* border: 1PX solid yellow; */
 }
 .codexdiscp>.logo1{
     width: 100%;
@@ -666,14 +660,14 @@ body {
     font-size: 1rem;
     color: var(--lightPrimaryGrey);
     line-height: 1.8;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.0938rem;
 }
 .footerservice{
     display: flex;
     flex-direction: column;
     width: 20rem;
     height: 20.62rem;
-    gap: 20px;
+    gap: 1.25rem;
     /* border: 1PX solid yellow; */
 }
 .footerservice>.ourservices>h2{
@@ -757,7 +751,7 @@ body {
     font-size: 1.25rem;  
     color: var(--lightPrimaryGrey);
     margin-left: 3.4rem;
-    line-height: 20px;
+    line-height: 1.25rem;
 }
 .footertouch>.footerloc>p{
     font-family: "Barlow", serif;
@@ -766,7 +760,7 @@ body {
     color: var(--lightPrimaryGrey);
     margin-left: 3.4rem;
     margin-left: 3.4rem;
-    line-height: 20px;
+    line-height: 1.25rem;
 }
 .bottomfooter{
     width: 100%;
@@ -777,7 +771,7 @@ body {
     /* border: 1px solid red; */
 }
 .bottomfooter>.socialstop{
-    width: 250px;
+    width: 15.63rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -786,8 +780,8 @@ body {
     display: flex;
  }
 .socialstop>.wrpsocial a{ 
-    border: 1px solid var(--lightPrimaryGrey);
-    border-radius: 5px;
+    border: 0.063rem solid var(--lightPrimaryGrey);
+    border-radius: 0.313rem;
     padding: 0.6rem;
     margin-right: 1rem;
     width: 2.19rem;
@@ -805,14 +799,14 @@ body {
     transition: all 0.5s ease-out;
  }
 .socialstop>.bTop i{
-   font-size: 50px;
+   font-size: 3.125rem;
    color: var(--lightPrimaryGrey);
    transform: rotate(180deg);
    transition: all 0.5s ease-out;
 }
 .socialstop>.bTop>a :hover {
     background-color: var(--lightPrimaryGrey);
-    border-radius: 5px; 
+    border-radius: 0.313rem; 
    
 }
 .socialstop>.bTop i:hover{
