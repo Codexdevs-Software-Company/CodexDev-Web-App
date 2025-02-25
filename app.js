@@ -16,7 +16,6 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.custom-prev',
     },
     effect: 'fade', // Smooth fade transition (or use "slide" for normal)
-
 });
 
 // slider js code end
@@ -118,8 +117,8 @@ class MyFooter extends HTMLElement {
             </span>
             <div class="socialstop">
              <div class="wrpsocial">
-                <a href= "#"> <i class="fa-brands  fa-facebook-f"></i></a>
-                <a href= "#"> <i class="fa-brands  fa-linkedin-in"></i></a>
+                <a href= "https://www.facebook.com/people/Codexdev/61561564619057/" target="_blank"> <i class="fa-brands  fa-facebook-f"></i></a>
+                <a href= "https://www.linkedin.com/company/codexdevs/" target="_blank"> <i class="fa-brands  fa-linkedin-in"></i></a>
               </div>
               <div class="bTop"><a href="#"  id"backTop"> <i class="fa-solid fa-angle-down down"></i></a>
               </div>
@@ -132,7 +131,7 @@ class MyFooter extends HTMLElement {
 }
 customElements.define("my-header", MyHeader)
 customElements.define("my-footer", MyFooter)
-
+// common header and footer js code end
 
 const headerLogo = document.querySelector(".logo");
 headerLogo.style.cursor = "pointer";
@@ -151,7 +150,7 @@ getStarted.forEach((btn)=>{
     })
 });
 // Getstarted code end
-// common header and footer js code end
+
 
 // For blocking right click
 // document.addEventListener("contextmenu",function(e){
@@ -179,22 +178,18 @@ document.addEventListener("click", function (event) {
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.servicedev');
     const backToTop = document.getElementById('backTop');
-
     function showSection(serviceId) {
         sections.forEach(section => section.classList.remove('active'));
         const activeSection = document.getElementById(serviceId);
         if (activeSection) activeSection.classList.add('active');
     }
-
     function loadSectionFromHash() {
         const hash = window.location.hash.slice(1);
         if (hash) {
             showSection(hash);
         }
     }
-
     loadSectionFromHash();
-
     window.addEventListener('hashchange', loadSectionFromHash);
 
     // Handle Back to Top button
@@ -204,6 +199,18 @@ document.addEventListener('DOMContentLoaded', function () {
         // No change to hash, so content remains visible
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const serviceCards = document.querySelectorAll(".card");
+
+    serviceCards.forEach(card => {
+        card.addEventListener("click", function () {
+            const serviceId = this.getAttribute("id");
+            window.location.href = `services.html#${serviceId}`;
+        });
+    });
+});
+
 const swiperPause = document.querySelector('.swiper');
 swiperPause.addEventListener('mouseenter',()=>{
    swiper.autoplay.stop();

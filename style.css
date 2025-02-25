@@ -16,10 +16,20 @@
 html {
     scroll-behavior: smooth;
     cursor: context-menu;
+    font-size: 100%;
+}
+@media(max-width:768px){
+    html{
+        font-size: 60%;
+    }
+}
+@media(max-width:480px){
+    html{
+        font-size: 45%;
+    }
 }
 body {
     font-family: barlow,serif;
-    font-size: 100%;
 }
 
 /* Header Section Design */
@@ -252,7 +262,6 @@ body {
     width: 4.7rem;
     height: 2.5rem;
 }
-
 .div3 {
     background-color: var(--blueLight);
     width: 2.8rem;
@@ -264,7 +273,6 @@ body {
     width: 4.7rem;
     height: 2.5rem;
 }
-
 .div5 {
     background-color: var(--bluePrimary);
     width: 6rem;
@@ -350,7 +358,7 @@ body {
 }
 @media(max-width:480px){
     .servicessSectn>.serviceCards{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 }
 .card {
@@ -360,6 +368,7 @@ body {
     border-radius: 0.5rem;
     box-shadow: 0 0.25rem 1.5rem 0 #55555515;
     transition: all 0.5s ease-out;
+    cursor: pointer;
 }
 .card:hover {
     transform: scaleX(1.1);
@@ -459,6 +468,10 @@ body {
 }
 .profile{
     transform: rotateY(0deg);
+}
+.profile>.profileimg>.hansaimg{
+    width: 220px;
+    height: 130px;
 }
 .profile .tPic{
     width: 9.375rem;
@@ -563,7 +576,7 @@ body {
     height: 43.75rem;
 }
 .swiper {
-    width: 80rem;
+    width: 78rem;
     height: 37.5rem;
     margin-top: 2.37rem;
     border-radius: 0.62rem;
@@ -601,8 +614,8 @@ body {
     z-index:10;
 }
 
-.custom-prev {left: 0.76rem; }
-.custom-next { right:0.76rem; }
+.custom-prev {left: 1.5rem; }
+.custom-next { right:1.5rem; }
 /* Custom Pagination Dots */
 .swiper-pagination-bullet {
     width: 1rem;
@@ -619,6 +632,36 @@ body {
 /* Styling of slider end*/
 /* Styling of prouduct section end */
 
+/* Style of testomonial section  */
+.testomonials-sect{
+    padding: 8rem 0 8rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.testomonial{
+    width: 100%;
+    padding: 3rem 2rem 3rem 2rem;
+    margin: 0 3.63rem 0 3.63rem;
+    border:1px solid var(--blueLight);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 1rem;
+}
+.expert{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+.expert h2,h4{
+    color: var(--bluePrimary);
+    font-size: 2rem;
+}
+/* Style of testomonial section  */
 
 /* Footer Section Styling */
 

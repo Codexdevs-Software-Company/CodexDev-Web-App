@@ -21,6 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: calc(100vh-10vh);
 }
 .softwrap{
     width: 78rem;
