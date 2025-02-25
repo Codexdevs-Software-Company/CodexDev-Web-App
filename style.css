@@ -473,13 +473,7 @@ body {
     width: 220px;
     height: 130px;
 }
-.profile .tPic{
-    width: 9.375rem;
-    height: 9rem;
-    border: 1px solid var(--blueLight);
-    border-radius: 50%;
-    background-color: #fff;
-}
+
 .backprfile {
     width: 100%;
     height: 100%;
@@ -640,25 +634,40 @@ body {
     align-items: center;
 }
 .testomonial{
-    width: 100%;
+    width: 100vw;
+    height:12.125rem;
     padding: 3rem 2rem 3rem 2rem;
     margin: 0 3.63rem 0 3.63rem;
     border:1px solid var(--blueLight);
+    background-color: var(--bluePrimary);
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 2rem;
-    border-radius: 1rem;
+}
+.testomonial>.leftline{
+    height: 7rem;
+    border-left: 2px solid #fff;
 }
 .expert{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.4rem;
+    gap: 1.5rem;
+}
+.expert h2{
+    font-family: "Barlow", serif;
+    font-weight: 600;
+    font-size: 1.75rem;
+}
+.expert h4{
+    font-family: "Barlow", serif;
+    font-weight: 700;
+    font-size: 3.125rem;
 }
 .expert h2,h4{
-    color: var(--bluePrimary);
+    color: #fff;
     font-size: 2rem;
 }
 /* Style of testomonial section  */

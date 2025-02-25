@@ -17,7 +17,7 @@
     display: none;
 }
 .servicedev.active{
-    padding: 10.63rem 1rem 10.63rem;
+    padding: 6.63rem 1rem 20.63rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +34,8 @@ main .servicedev1 {
     font-size: 3.125rem;
     font-family: "Barlow", serif;
     font-weight: 800;
-    color: var(--bluePrimary);
+    color: var(--blueLight);
+    text-align: center;
 }
 
 main .servicedev1 span {
@@ -50,25 +51,7 @@ main p{
     text-align: justify;
     color: var(--blueLight);
 }
-main ul li{
-    font-family: "Barlow", serif;
-    font-weight: 400;
-    line-height: 2;
-    font-size: 1.25rem;
-    list-style: circle inside;
-    color: var(--blueLight);
-    margin-left: 1rem;
-}
-main ul li span{
-    color: var(--bluePrimary);
-    font-weight: 500;
-}
-main ul li::marker{
-    font-size: 1.5rem;
-    color: var(--blueLight);
-}
-main h2{
-    color: var(--bluePrimary);
-    margin-top: 1rem;
-    font-size: 1.5rem;
+p span{
+    display: block;
+    text-align: center;
 }

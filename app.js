@@ -37,11 +37,11 @@ class MyHeader extends HTMLElement {
               <i class="fa-solid fa-angle-down down">
                     <div class="dropdown">
                         <ul>
-                           <li  class="service-link" ><a href="./services.html#social">SOCIAL MEDIA MARKETING</a></li>
-                            <li  class="service-link"><a href="./services.html#softdev">SOFTWARE DEVELOPMENT</li>
+                           <li  class="service-link" ><a href="./services.html#social">DEGITAL MARKETING</a></li>
+                            <li  class="service-link"><a href="./services.html#softdev">PYTHON DEVELOPMENT</li>
                             <li  class="service-link"><a href="./services.html#webdev">WEB DEVELOPMENT</a></li>
                             <li  class="service-link"><a href="./services.html#appdev">APP DEVELOPMENT</a></li>
-                            <li  class="service-link"><a href="./services.html#UI">UI/UX DESIGNING</a></li>
+                            <li  class="service-link"><a href="./services.html#UI">PRODUCT DESIGNING</a></li>
                             <li  class="service-link"><a href="./services.html#Graphs">GRAPHIC DESIGNING</a></li>
                             <li  class="service-link"><a href="./services.html#cloud">CLOUD SERVICES</a></li>
                         </ul>
@@ -78,13 +78,13 @@ class MyFooter extends HTMLElement {
                 </div>
                 <div class="servicelist">
                     <ul>
-                    <li  class="service-link"><a href="./services.html#social">Socail Media Marketing</a></li>
+                    <li  class="service-link"><a href="./services.html#social">Degital Marketing</a></li>
                         <li  class="service-link"><a href="./services.html#webdev">Web Development</a></li>
                         <li  class="service-link"><a href="./services.html#appdev">App Development</a></li>
-                        <li  class="service-link"><a href="./services.html#UI">UI UX Designing</a></li>
+                        <li  class="service-link"><a href="./services.html#UI">Product Designing</a></li>
                         <li  class="service-link"><a href="./services.html#cloud">Cloud Services</a></li>
                         <li  class="service-link"><a href="./services.html#Graphs">Graphic Designing</a></li>
-                        <li  class="service-link"><a href="./services.html#softdev">Software Development</a></li>
+                        <li  class="service-link"><a href="./services.html#softdev">Python Development</a></li>
                     </ul>
                 </div>
             </div>
