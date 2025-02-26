@@ -16,6 +16,7 @@
 html {
     scroll-behavior: smooth;
     cursor: context-menu;
+    font-family: barlow,serif;
     font-size: 100%;
 }
 @media(max-width:768px){
@@ -28,9 +29,6 @@ html {
         font-size: 45%;
     }
 }
-body {
-    font-family: barlow,serif;
-}
 
 /* Header Section Design */
 
@@ -39,7 +37,7 @@ body {
     justify-content: space-between;
     align-items: center;
     top: 0;
-    width: 100%;
+    width: 100vw;
 }
 .logo {
     margin: 1.36rem 0 0 3.13rem;
@@ -411,11 +409,13 @@ body {
 /* Styling of our team section */
 
 .ourTameSectn {
+    width: 100vw;
     padding: 3.63rem 3.4rem 2.63rem 3.4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px solid black;
 }
 
 .ourTameSectn>h1>span {
@@ -429,13 +429,14 @@ body {
 }
 
 .teamprofile {
+    width: 92vw;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 4.689rem;
     padding: 1.9rem 0 0 0;
-
+    border: 1px solid black;
 }
 
 .card-profile {
