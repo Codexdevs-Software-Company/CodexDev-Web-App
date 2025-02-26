@@ -157,6 +157,8 @@ html {
 
 /* Styling of hero section */
 .hero-section {
+    width: 100vw;
+    height: auto;
     display: flex;
     padding: 4.63rem 0 3.63rem 3.13rem;
     justify-content: space-between;
@@ -166,7 +168,8 @@ html {
 .headline {
     display: flex;
     flex-direction: column;
-    height: 25rem;
+    height:auto;
+    gap: 4rem;
     justify-content: space-between;
     width: 50%;
 }
@@ -211,7 +214,6 @@ html {
     color: var(--primaryBlack);
     cursor: pointer;
     font-size: 1.125rem;
-    margin-top: 3.75rem;
     width: 12.5rem;
     height: 3.75rem;
     transition: all 0.5s ease-out;
@@ -228,7 +230,7 @@ html {
     color: var(--lightPrimaryGrey);
     cursor: pointer;
     font-size: 1.125rem;
-    margin-top: 3.75rem;
+  
     width: 12.5rem;
     height: 3.75rem;
     transition: all 0.5s ease-out;
@@ -247,7 +249,7 @@ html {
     align-items: flex-end;
     justify-content: space-between;
     height:15.62rem;
-    margin-bottom: 3.75rem;
+    margin-bottom: 9.75rem;
 }
 
 .div1 {
