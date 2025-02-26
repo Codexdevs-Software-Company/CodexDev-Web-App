@@ -55,7 +55,7 @@ html {
 .nav .nav-items {
     display: flex;
     align-items: center;
-    gap: 1.87rem;
+    gap: 2.5rem;
 }
 
 .nav-items a {
@@ -89,12 +89,12 @@ html {
 
 .nav-items>#getStarted {
     width: 7.5rem;
-    height: 2.19rem;
+    height: 2.5rem;
     color: var(--lightPrimaryGrey);
-    font-size: 0.95rem;
+    font-size: 0.9375rem;
     background-color: var(--blueLight);
-    padding: 0.5rem 0.8rem;
-    border-radius: 1.3rem;
+    padding: 0.7rem 0.625rem 1rem 0.625rem;
+    border-radius: 1.5rem;
     cursor: pointer;
     border-style: none;
     opacity: 0.9;
@@ -110,7 +110,7 @@ html {
 
 .down {
     cursor: pointer;
-    margin-left: -1.3rem;
+    margin-left: -1.9rem;
     position: relative;
     opacity: 0.7;
 }
@@ -161,9 +161,6 @@ html {
     padding: 4.63rem 0 3.63rem 3.13rem;
     justify-content: space-between;
     align-items: center;
-    /* margin-top: 3rem; */
-    /* height: 25.25rem; */
-    /* border: 1px solid black; */
 }
 
 .headline {
@@ -206,19 +203,23 @@ html {
 }
 
 .headline>.headlineBtns>#viewproject {
-    margin-left: 0.8rem;
+    margin-left: 5rem;
     padding: 0.5rem 0.55rem 0.5rem 0.55rem;
     border-radius: 6.25rem;
     border-style: none;
-    background-color: var(--darkGrey);
-    color: var(--lightPrimaryGrey);
+    background-color: var(--lightPrimaryGrey);
+    color: var(--primaryBlack);
     cursor: pointer;
-    font-size: 0.65rem;
-    margin-top: 0.5rem;
-    width: 7.25rem;
-    height: 2rem;
+    font-size: 1.125rem;
+    margin-top: 3.75rem;
+    width: 12.5rem;
+    height: 3.75rem;
+    transition: all 0.5s ease-out;
 }
-
+.headline>.headlineBtns>#viewproject:hover{
+    background-color: var(--darkGrey);
+    color: #fff;
+}
 .headline>.headlineBtns>#getStarted {
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
     border-radius: 6.25rem;
@@ -226,10 +227,10 @@ html {
     background-color: var(--blueLight);
     color: var(--lightPrimaryGrey);
     cursor: pointer;
-    font-size: 0.65rem;
-    margin-top: 0.5rem;
-    width: 7.25rem;
-    height: 2rem;
+    font-size: 1.125rem;
+    margin-top: 3.75rem;
+    width: 12.5rem;
+    height: 3.75rem;
     transition: all 0.5s ease-out;
 }
 
@@ -300,6 +301,7 @@ html {
 
 /* Styling Services Section */
 .servicessSectn {
+    width: 100vw;
     padding: 3.63rem 3.4rem 2.63rem 3.4rem;
     display: flex;
     flex-direction: column;
@@ -415,7 +417,6 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
 }
 
 .ourTameSectn>h1>span {
@@ -436,7 +437,6 @@ html {
     align-items: center;
     gap: 4.689rem;
     padding: 1.9rem 0 0 0;
-    border: 1px solid black;
 }
 
 .card-profile {
@@ -451,6 +451,7 @@ html {
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.5s;
+    border: 1px solid var(--blueLight);
 }
 .card-profile:hover .inner{
     transform: rotateY(180deg);
@@ -459,7 +460,7 @@ html {
 .profile {
     width: 100%;
     height: 100%;
-    border: 1px solid var(--blueLight);
+   
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
@@ -479,7 +480,7 @@ html {
     width: 100%;
     height: 100%;
     position: absolute;
-    border: 1px solid var(--blueLight);
+
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -639,12 +640,21 @@ html {
     height:12.125rem;
     padding: 3rem 2rem 3rem 2rem;
     margin: 0 3.63rem 0 3.63rem;
-    border:1px solid var(--blueLight);
     background-color: var(--bluePrimary);
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 2rem;
+    transition: all 0.3s linear;
+}
+.testomonial:hover {
+    background-color: #fff;
+}
+.testomonial:hover .expert h2{
+    color: var(--blueLight);
+}
+.testomonial:hover .expert h4{
+    color: var(--blueLight);
 }
 .testomonial>.leftline{
     height: 7rem;
@@ -670,7 +680,9 @@ html {
 .expert h2,h4{
     color: #fff;
     font-size: 2rem;
+    transition: all 0.3s ease-out;
 }
+
 /* Style of testomonial section  */
 
 /* Footer Section Styling */
