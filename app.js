@@ -48,7 +48,7 @@ class MyHeader extends HTMLElement {
                         </ul>
                     </div>
                 </i>
-                  <li><a href="./Portfolio.html">PORTFOLIO</a> </li>
+                  <li><a href="./portfolio.html">PORTFOLIO</a> </li>
                 <button type="button" id="getStarted" class="getStarted">Get Started</button>
             </ul>
         </nav>
