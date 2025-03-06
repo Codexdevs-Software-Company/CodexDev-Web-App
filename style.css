@@ -16,8 +16,12 @@
 html {
     scroll-behavior: smooth;
     cursor: context-menu;
-    font-family: barlow,serif;
     font-size: 100%;
+  
+}
+body{
+    font-family: barlow,serif;
+    overflow-x: hidden;
 }
 @media(max-width:768px){
     html{
@@ -49,7 +53,6 @@ html {
 .nav {
     margin-right: 2.812rem;
     padding: 0.313rem;
-
 }
 
 .nav .nav-items {
@@ -248,8 +251,8 @@ html {
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
-    height:15.62rem;
     margin-bottom: 9.75rem;
+    gap: 1.88rem;
 }
 
 .div1 {
@@ -399,145 +402,6 @@ html {
 }
 
 /* Styling services section end */
-
-/* syling of viewprojects */
-.viewprojects{
- width: 100vw;
- padding: 3.63rem 3.4rem 2.63rem 3.4rem;
-}
-.viewprojects>p{
-    font-family: "Barlow", sans-serif;
-    font-weight: 400;
-    font-size: 1.25rem;
-    color: var(--primaryBlack);
-    margin-top: 1.5rem;
-}
-.recentproject{
-    display: flex;
-    justify-content: space-between;
-}
-.portfolio{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.portfolio h1{
-    font-family: "Barlow", sans-serif;
-    font-weight: 600;
-    font-size: 2.5rem;
-}
-.portfolio>h1 span{
-    color: var(--bluePrimary);
-}
-.portfolio h1 :last-child{
-    font-family: "Barlow", sans-serif;
-    font-weight: 800;
-}
-.recentproject>#viewportfolio{
-    padding: 0.5rem 0.55rem 0.5rem 0.55rem;
-    border-radius: 1rem;
-    border-style: none;
-    background-color: var(--lightPrimaryGrey);
-    color: var(--primaryBlack);
-    cursor: pointer;
-    font-family: "Barlow", sans-serif;
-    font-weight: 400;
-    font-size: 1.25rem;
-    width: 12.5rem;
-    height: 3.75rem;
-    transition: all 0.5s ease-out;
-}
-.recentproject>#viewportfolio:hover{
-    background-color: var(--bluePrimary);
-    color: var(--lightPrimaryGrey);
-}
-.projectDetails{
-    display: flex;
-    gap: 2.81rem;
-    margin-top: 3.13rem;
-}
-
-.logoview>img{
-   width: 38.63rem;
-   height: 33.38rem;
-}
-.logoview{
-    transition: opacity 0.5s ease;
-    opacity: 1;
-}
-.logoview.fadeOut{
-    opacity: 0;
-}
-.prjectContent{
-    display: flex;
-    flex-direction: column;
-}
-.prjectContent>h1{
-    font-family: "Barlow", sans-serif;
-    font-weight: 400;
-    font-size: 2.81rem;
-    color: #000;
-}
-#title{
-    transition: opacity 0.5s ease;
-    opacity: 1;
-}
-#title.fadeOut{
-    opacity: 0;
-}
-.prjectContent>p{
-    font-family: "Barlow", sans-serif;
-    font-weight: 400;
-    font-size: 1.88rem;
-    margin-top: 3.13rem;
-    color: #000;
-}
-#projectDecrpt{
-    transition: opacity 0.5s ease;
-    opacity: 1;
-}
-#projectDecrpt.fadeOut{
-    opacity: 0;
-}
-.sendcase{
-    margin-top: 6.25rem;
-    display: flex;
-    justify-content: center;
-}
-.sendcase>#getStarted{
-    margin-left: 2.813rem;
-}
-.sendcase .samebtns{
-    padding: 1rem 1rem;
-    border-radius: 1rem;
-    border-style: none;
-    background-color: var(--lightPrimaryGrey);
-    color: var(--primaryBlack);
-    cursor: pointer;
-    font-family: "Barlow", sans-serif;
-    font-weight: 400;
-    font-size: 1.25rem;
-    width: 12.5rem;
-    height: 3.5rem;
-    transition: all 0.5s ease-out;
-}
-.sendcase .samebtns:hover{
-    background-color: var(--bluePrimary);
-    color: var(--lightPrimaryGrey);
-}
-.nextprevbtns{
-    display: flex;
-    justify-content: center;
-    margin-top: 6.56rem;
-}
-.nextprevbtns img{
-    cursor: pointer;
-}
-.nextprevbtns img:last-child{
-    margin-left: 10rem;
-}
-/* syling of viewprojects end*/
-
 
 /* Styling of our team section */
 
@@ -696,12 +560,16 @@ html {
 }
 /* Styling of slider */
 .swipper-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     overflow: hidden;
+    width: 100vw;
     height: 43.75rem;
 }
 .swiper {
-    width: 78rem;
+    width: 93vw;
     height: 37.5rem;
     margin-top: 2.37rem;
     border-radius: 0.62rem;
@@ -724,7 +592,7 @@ html {
     object-fit: cover;
 }
 .swiper-slide img{
-    width: 100%;   
+    width: 100%; 
 }
 
 /* Custom Navigation Buttons */
@@ -736,7 +604,7 @@ html {
     color: var(--blueLight); 
     transition: 0.3s;
     cursor: pointer;
-    z-index:10;
+    z-index: 10;
 }
 
 .custom-prev {left: 1.5rem; }

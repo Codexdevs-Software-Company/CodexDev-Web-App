@@ -23,9 +23,9 @@
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+    margin-bottom: 8rem;
 }
 .aboutdesc>h1{
-    font-family: "Barlow", serif;
     font-weight: 900;
     font-size: 3.94rem;  
     font-style: italic;
@@ -35,8 +35,10 @@
     color: var(--bluePrimary)
 }
 .aboutdesc>p{
-    font-family: "Barlow", serif;
     font-weight: 400;
     font-size: 1.75rem;
     color: var(--bluePrimary);
+}
+.logo3{
+    margin-bottom: 8rem;
 }

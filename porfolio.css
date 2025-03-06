@@ -1,0 +1,220 @@
+:root {
+    --bluePrimary: #0A2449;
+    --blueLight: #3b506d;
+    --darkGrey: #7C7A7D;
+    --lightPrimaryGrey: #D2D2D2;
+    --primaryBlack: #1E1E1E;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.portfolio{
+  width: 100vw;
+  padding: 3.63rem 3.4rem 2.63rem 3.4rem;
+  position: relative;
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+}
+.portfoliotext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.portfoliotext h1,h2{
+    color: var(--blueLight);
+    font-weight: 600;
+    font-size: 5rem;
+}
+.portfoliotext>a button{
+    width:21.25rem;
+    height: 5rem;
+    font-weight: 600;
+    font-size: 3.13rem;
+    color: #fff;
+    background-color: var(--bluePrimary);
+    border: none;
+    border-radius: 0.8rem;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 0 1.563rem 0 #3B506D59;
+    transform: rotate(-4.09deg);
+    cursor: pointer;
+}
+.portfoliotext p{
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.88rem;  
+    color: var(--blueLight);
+    margin-top: 2.5rem;
+}
+.portfolio #curve{
+    position: absolute;
+    top: 9rem;
+    right: -6rem;
+    width: 9.312rem;
+    height: 24.3rem;
+}
+.portfolio #curvearrow{
+    width: 1.511rem;
+    height: 1.772rem;
+    position: absolute;
+    right: -1.4rem;
+    top: 30rem;
+}
+.portfolio #leave{
+    position: absolute;
+    width: 2.98rem;
+    height: 2.34rem;
+    top: -1rem;
+    left: 0rem;
+}
+.develop{
+    width: 100vw;
+    padding: 3.63rem 3.4rem 2.63rem 3.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.88rem;
+    margin-top: 6.87rem;
+}
+.develop h1 :first-child{
+    color: var(--bluePrimary);
+    font-weight: 400;
+    font-size: 4.38rem;
+}
+.develop h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.develop h1 :nth-child(2){
+    color: var(--blueLight);
+    font-weight: 700;
+    font-size: 4.38rem;
+}
+.develop h1 :last-child{
+    color: var(--darkGrey);
+    font-weight: 900;
+    font-size: 4.38rem;
+}
+.develop p{
+    width: 35.88rem;
+    color: var(--bluePrimary);
+    font-weight: 400;
+    font-size: 1.88rem;
+    text-align: center;
+}
+.recentPrjsts{
+    width: 100vw;
+    padding: 3.63rem 3.4rem 2.63rem 3.4rem;
+    margin-top: 5.52rem;
+}
+.recentPrjsts>:first-child{
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--primaryBlack);
+}
+.recentPrjsts :nth-child(2) :first-child{
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--bluePrimary);
+    line-height: 4rem;
+}
+.recentPrjsts :nth-child(2) :last-child{
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: var(--bluePrimary);
+}
+.recentPrjsts>:last-child{
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: var(--primaryBlack);
+    margin-top: 1.5rem;
+}
+.muscolodesc{
+    width: 100vw;
+    padding: 3.63rem 3.4rem 2.63rem 3.4rem;
+}
+.muclologo{
+    width: 100%;
+    height: 19.44rem;
+}
+.muclologo img{
+    width: 100%;
+    height: 100%;
+}
+.descmusclo{
+    width: 32rem;
+    margin-top: 0.94rem;
+}
+.descmusclo img{
+    height: 2rem;
+}
+.descmusclo  :nth-child(2){
+    display: inline-block;
+    margin-left: .4rem;
+}
+.descmusclo p{
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-align: justify;
+    line-height: 1.5rem;
+}
+.pharmasection{
+    width: 100vw;
+    padding: 3.63rem 3.4rem 2.63rem 3.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+.pharmasection>.logopharma{
+   width: 50%;
+   height: 31.9rem;
+}
+.pharmasection>.logopharma img{
+      width: 100%;
+      height: 100%;
+}
+.pharmasection>.descpharma{
+    width: 50%;
+    height: 9.1rem;
+    margin-left: 9.7rem;
+}
+.descpharma p>span{
+    font-weight: 800;
+    font-size: 2.13rem;
+    color: #000;
+}
+.descpharma p{
+    font-weight: 400;
+    font-size: 1.9rem;
+}
+.pharmasection>.viewlogo{
+    width: 50%;
+    height: 31.9rem;
+    margin-left: 9.7rem;
+}
+.pharmasection>.viewlogo img{
+    width: 100%;
+    height: 100%;
+}
+.pharmasection>.descpharma1{
+    width: 50%;
+    height: 9.1rem;
+}
+.descpharma1 p>span{
+    font-weight: 800;
+    font-size: 2.13rem;
+    color: #000;
+}
+.descpharma1 p{
+    font-weight: 400;
+    font-size: 1.9rem;
+}

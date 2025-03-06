@@ -12,7 +12,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 .servicedev{
     display: none;
 }
@@ -32,19 +31,16 @@
 
 main .servicedev1 {
     font-size: 3.125rem;
-    font-family: "Barlow", serif;
     font-weight: 800;
     color: var(--blueLight);
     text-align: center;
 }
 
-main .servicedev1 span {
-    font-family: "Barlow", serif;
+main .servicedev1 span{
     font-weight: 600;
     color: var(--primaryBlack);
 }
 main p{
-    font-family: "Barlow", serif;
     font-weight: 400;
     font-size: 1.25rem;
     line-height: 1.5;

@@ -33,6 +33,7 @@ class MyHeader extends HTMLElement {
                 <li><a href="./index.html">HOME</a></li>
                 <li><a href="./aboutus.html">ABOUT US</a></li>
                 <li><a href="./index.html#ourTameSectn">OUR TEAM</a></li>
+                <li><a href="./index.html#productsectn">PRODUCTS</a></li>
                 <li><a href="./index.html#servicecrd">SERVICES</a> </li>
               <i class="fa-solid fa-angle-down down">
                     <div class="dropdown">
@@ -47,7 +48,7 @@ class MyHeader extends HTMLElement {
                         </ul>
                     </div>
                 </i>
-                <li><a href="./index.html#productsectn">PRODUCTS</a></li>
+                <li><a href="./portfolio.html">PORTFOLIO</a></li>
                 <button type="button" id="getStarted" class="getStarted">Get Started</button>
             </ul>
         </nav>
@@ -219,58 +220,3 @@ swiperPause.addEventListener('mouseleave',()=>{
    swiper.autoplay.start();
 });
 
-
-
-const projects = [
-    {
-        logo: 'images/viewlogo.png',
-        title: 'COUPONSHUB',
-        desc:  `CouponsHub offers 100% free Udemy course coupons, making premium learning
-                        accessible at no cost!`
-    },
-    {
-        logo: 'images/Muscolo.png',
-        title: 'MUSCOLO',
-        desc:  `Muscolo App is a powerful CMD-based gym fitness management system for seamless member and workout tracking.`
-    },
-    {
-        logo: 'images/pharmacarelogo.png',
-        title: 'PHARMA CARE +',
-        desc:  `Pharma Care+ provides medicine details, dosage, first aid tips, and a doctor-approved chatbot for real-time assistance.`
-    },
-]
-const viewlogo = document.querySelector('.logoview')
-const logo = document.querySelector('#copun');
-const title = document.querySelector('#title');
-const desc = document.querySelector('#projectDecrpt');
-let currentIndex = 0;
-
-function updateProject(index) {
-    viewlogo.classList.add("fadeOut")
-    title.classList.add("fadeOut")
-    desc.classList.add("fadeOut")
-    setTimeout(()=>{
-        logo.src = projects[index].logo;
-        title.textContent = projects[index].title;
-        desc.textContent = projects[index].desc;
-
-        viewlogo.classList.remove("fadeOut")
-        title.classList.remove("fadeOut")
-        desc.classList.remove("fadeOut")
-    },500);
-  }
-
-  document.querySelector('.next-btn').addEventListener('click', function () {
-    currentIndex++;
-    if (currentIndex >= projects.length) {
-      currentIndex = 0; 
-    }
-    updateProject(currentIndex);
-  });
-  document.querySelector('.prev-btn').addEventListener('click', function () {
-    currentIndex--;
-    if (currentIndex < 0) {
-      currentIndex = projects.length - 1;
-    }
-    updateProject(currentIndex);
-  });
