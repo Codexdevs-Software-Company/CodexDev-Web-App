@@ -170,19 +170,24 @@
     width: 100vw;
     padding: 3.63rem 3.4rem 2.63rem 3.4rem;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 5rem;
     margin-top: 1.4rem;
 }
-.pharmasection>.logopharma{
+.pharmainfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pharmainfo>.logopharma{
    width: 50%;
    height: 31.9rem;
 }
-.pharmasection>.logopharma img{
+.pharmainfo>.logopharma img{
       width: 100%;
       height: 100%;
 }
-.pharmasection>.descpharma{
+.pharmainfo>.descpharma{
     width: 50%;
     height: 9.1rem;
     margin-left: 9.7rem;
@@ -196,25 +201,134 @@
     font-weight: 400;
     font-size: 1.9rem;
 }
-.pharmasection>.viewlogo{
+.couponinfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.couponinfo>.viewlogo{
     width: 50%;
     height: 31.9rem;
     margin-left: 9.7rem;
 }
-.pharmasection>.viewlogo img{
+.couponinfo>.viewlogo img{
     width: 100%;
     height: 100%;
 }
-.pharmasection>.descpharma1{
+.couponinfo>.couponinfo{
     width: 50%;
     height: 9.1rem;
 }
-.descpharma1 p>span{
+.couponinfo p>span{
     font-weight: 800;
     font-size: 2.13rem;
     color: #000;
 }
-.descpharma1 p{
+.couponinfo p{
     font-weight: 400;
     font-size: 1.9rem;
+}
+.koriasect{
+    width: 100vw;
+    padding: 3.63rem 3.4rem 2.63rem 3.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.1rem;
+    align-items: center;
+    margin-top: 4.4rem;
+}
+.koriasect h1{
+    width: 44.5rem;
+    text-align: center;
+    line-height: 3.5rem;
+    color: var(--blueLight);
+    font-weight: 500;
+    font-size: 2.8rem;
+}
+.koriasect h1>span{
+    color: var(--blueLight);
+    font-weight: 800;
+}
+.koriasect p{
+    width: 54.1rem;
+    font-weight: 400;
+    font-size: 1.9rem;
+    text-align: center;
+    color: #000;
+}
+.koriasect img{
+    width: 23.4rem;
+    height: 25rem;
+}
+.feedbacksectn{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 9.4rem;
+    margin-bottom: 8.8rem;
+}
+.feedbacksectn>h1{
+    font-weight: 400;
+    color: var(--bluePrimary);
+    font-size: 4.4rem;
+}
+.feedbacksectn>h1>span{
+    font-weight: 900;
+}
+.feedbck-slider{
+    position: relative;
+    margin-top: 5rem;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.feedbck-prsons{
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+}
+.feedbck-prsons>:first-child ,.feedbck-prsons>:last-child{
+    font-weight: 400;
+    font-size: 1.9rem;
+    color: var(--blueLight);
+}
+.feedbck-prsons>:nth-child(2){
+    font-weight: 600;
+    font-size: 3.13rem;
+    color: var(--blueLight);
+}
+.feedbck-slider>h3{
+    color: var(--blueLight);
+    font-weight: 500;
+    font-size: 1.9rem;
+    margin-top: 1.9rem;
+}
+.feedbck-slider>img{
+    width: 14rem;
+    height: 2.5rem;
+    margin-top: 1.3rem;
+}
+.feedbck-slider>p{
+    width: 56.8rem;
+    font-weight: 400;
+    font-size: 1.9rem;
+    margin-top: 1.3rem;
+    text-align: center;
+    color: #000;
+}
+.feedbck-slider>.left-right-arrows{
+    position: absolute;
+    top: 20%;
+    transform: translateY(-20%);
+    width: 4.1rem;
+    height: 4.1rem;
+    cursor: pointer;
+}
+.feedbck-slider>#leftarr{
+    left: -4rem;
+}
+.feedbck-slider>#rightarr{
+    right: -4rem;
 }

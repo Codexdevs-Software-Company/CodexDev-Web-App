@@ -37,11 +37,11 @@ body{
 /* Header Section Design */
 
 .header {
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     top: 0;
-    width: 100vw;
 }
 .logo {
     margin: 1.36rem 0 0 3.13rem;
