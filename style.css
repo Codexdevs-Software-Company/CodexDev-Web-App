@@ -94,10 +94,10 @@ body{
     width: 7.5rem;
     height: 2.5rem;
     color: var(--lightPrimaryGrey);
-    font-size: 0.9375rem;
+    font-size: 1rem;
     background-color: var(--blueLight);
-    padding: 0.7rem 0.625rem 1rem 0.625rem;
-    border-radius: 1.5rem;
+    padding: 0.63rem 1rem;
+    border-radius: 1rem;
     cursor: pointer;
     border-style: none;
     opacity: 0.9;
@@ -232,7 +232,7 @@ body{
     background-color: var(--blueLight);
     color: var(--lightPrimaryGrey);
     cursor: pointer;
-    font-size: 1.125rem;
+    font-size: 1.13rem;
     width: 12.5rem;
     height: 3.75rem;
     transition: all 0.5s ease-out;
@@ -251,36 +251,41 @@ body{
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
-    margin-bottom: 9.75rem;
-    gap: 1.88rem;
+    margin-bottom: 1.4rem;
+    gap: 1.4rem;
 }
 
 .div1 {
     background-color: var(--bluePrimary);
-    width: 6rem;
-    height: 2.5rem;
+    width: 12.4rem;
+    height: 3.8rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%, 12.7% 47.5%);
+    
 }
-
 .div2 {
     background-color: var(--darkGrey);
-    width: 4.7rem;
-    height: 2.5rem;
+    width: 9.7rem;
+    height: 3.8rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%, 12.7% 47.5%);
 }
 .div3 {
     background-color: var(--blueLight);
-    width: 2.8rem;
-    height: 2.5rem;
+    width: 6.8rem;
+    height: 3.8rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%, 12.7% 47.5%);
 }
 
 .div4 {
     background-color: var(--darkGrey);
-    width: 4.7rem;
-    height: 2.5rem;
+    width: 9.7rem;
+    height: 3.8rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%, 12.7% 47.5%);
 }
 .div5 {
     background-color: var(--bluePrimary);
-    width: 6rem;
-    height: 2.5rem;
+    width: 12.4rem;
+    height: 3.8rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%, 12.7% 47.5%);
 }
 
 @keyframes headlineBtns {
