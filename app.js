@@ -147,7 +147,7 @@ const getStarted = document.querySelectorAll("#getStarted");
 getStarted.forEach((btn) => {
     btn.addEventListener("click", () => {
 
-        location.href = "getstarted.html";
+        window.location.href = "getstarted.html";
     })
 });
 // Getstarted code end
@@ -171,7 +171,6 @@ if (select && customArrow) {
 }
 document.addEventListener("click", function (event) {
     if (!customArrow.contains(event.target)) {
-        console.log('slelcted');
         customArrow.classList.remove("active");
     }
 });
@@ -181,16 +180,24 @@ document.addEventListener("click", function (event) {
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.servicedev');
     const backToTop = document.getElementById('backTop');
+
+    function smoothScrollTo(target) {
+        const targetElement = document.querySelector(target);
+        if (targetElement) {
+            window.scrollTo({ top: targetElement.offsetTop, behavior: 'smooth' });
+        }
+    }
+
     function showSection(serviceId) {
         sections.forEach(section => section.classList.remove('active'));
         const activeSection = document.getElementById(serviceId);
         if (activeSection) activeSection.classList.add('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     function loadSectionFromHash() {
         const hash = window.location.hash.slice(1);
-        if (hash) {
+        if (hash && document.getElementById(hash)) {
             showSection(hash);
+            setTimeout(() => smoothScrollTo(`#${hash}`), 100);
         }
     }
     loadSectionFromHash();
@@ -201,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       
     });
-
+   
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -311,6 +318,7 @@ prev.addEventListener("click", () => {
 })
 // code for testomonial End
 
+
 const swiperPause = document.querySelector('.swiper');
 swiperPause.addEventListener('mouseenter', () => {
     swiper.autoplay.stop();
@@ -318,7 +326,6 @@ swiperPause.addEventListener('mouseenter', () => {
 swiperPause.addEventListener('mouseleave', () => {
     swiper.autoplay.start();
 });
-
 
 
 

@@ -164,11 +164,12 @@ form label {
 
 .labels>#message {
     background-color: #3B506D0D;
+    resize: none;
 }
 
 .formfileds>form>.wrapfields>.textfileds .fields {
-    width: 420px;
-    height: 54.5px;
+    width: 26.3rem;
+    height: 3.41rem;
     padding: 0.5rem;
     border: 1px solid var(--blueLight);
     border-radius: 4px;
@@ -184,6 +185,8 @@ form label {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    width: 26.3rem;
+    height: 3.41rem;
     font-size: 1.5rem;
     color: var(--blueLight);
     cursor: pointer;
@@ -209,8 +212,4 @@ form label {
     right: 15px;
     transform: rotate(225deg) translateY(-50%);
 }
-option {
-    appearance: none !important;
-    background: #3B506D0D !important;
-    padding: 2rem 0 !important;
-}
+
