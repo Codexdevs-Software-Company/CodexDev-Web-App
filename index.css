@@ -30,7 +30,7 @@ body{
 }
 @media(max-width:480px){
     html{
-        font-size: 45%;
+        font-size: 60%;
     }
 }
 
@@ -147,6 +147,7 @@ body{
 .dropdown a {
     font-weight: 500;
     color: var(--lightPrimaryGrey);
+    transition: all 0.2s ease-in-out;
 }
 
 .dropdown li {
@@ -164,9 +165,10 @@ body{
     width: 100vw;
     height: auto;
     display: flex;
-    padding: 3.2rem 0 3.63rem 3.13rem;
+    padding: 3.2rem 0 3.63rem 2.4rem;
     justify-content: space-between;
     align-items: center;
+  
 }
 
 .headline {
@@ -185,12 +187,11 @@ body{
     font-style: italic;
     font-weight: 900;
     color: var(--bluePrimary);
-    line-height: 118%;
+    transition: all 0.5s ease;
 }
 .headline>h1 span{
     display: inline-block;
     letter-spacing: 0.125rem;
-    transition: backgound-position 0.3s linear;
 }
 .headline>h1 span:hover{
     background: linear-gradient(#0A2449, #3B506D,#D2D2D2);
@@ -205,11 +206,12 @@ body{
     font-family: "Barlow", serif;
     font-weight: 600;
     color: var(--blueLight);
-    letter-spacing: 7%;
+    letter-spacing: 0.1rem;
+    margin-left: 0.5rem;
     cursor: context-menu;
 }
 
-.headline>.headlineBtns>#viewproject {
+.headline>.headlineBtns>#viewProject {
     margin-left: 3.125rem;
     padding: 0.5rem 0.55rem 0.5rem 0.55rem;
     border-radius: 1rem;
@@ -222,12 +224,13 @@ body{
     height: 3.75rem;
     transition: all 0.5s ease-out;
 }
-.headline>.headlineBtns>#viewproject:hover{
+.headline>.headlineBtns>#viewProject:hover{
     background-color: var(--darkGrey);
     color: #fff;
 }
 .headline>.headlineBtns>#getStarted {
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    margin-left: 0.5rem;
     border-radius: 1rem;
     border-style: none;
     background-color: var(--blueLight);
@@ -247,7 +250,6 @@ body{
 }
 
 .rectangles {
-    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -318,8 +320,7 @@ body{
 .services {
     display: flex;
     flex-direction: column;
-    /* height: 200px; */
-    /* border: 1px solid black; */
+    
 }
 
 .services>h1 {
@@ -352,15 +353,11 @@ body{
 }
 
 .servicessSectn>.serviceCards {
+    width:100%;
     padding: 3em 0 0 0; 
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 6.25rem;
-}
-@media(max-width:768px){
-    .servicessSectn>.serviceCards{
-        grid-template-columns: repeat(2,1fr);
-    }
+    grid-template-columns: repeat(3,1fr); 
+    gap: 6.9rem;
 }
 
 .card {
@@ -400,7 +397,6 @@ body{
 .card>p {
     font-family: "Barlow", serif;
     font-weight: 300;
-    /* border: 1px solid black; */
     text-align: center;
     margin-top: 2rem;
     padding: 1rem;
@@ -431,7 +427,7 @@ body{
 }
 
 .teamprofile {
-    width: 92vw;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

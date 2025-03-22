@@ -181,35 +181,4 @@ form label {
     outline: 1px solid var(--bluePrimary);
 }
 
-#subject {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 26.3rem;
-    height: 3.41rem;
-    font-size: 1.5rem;
-    color: var(--blueLight);
-    cursor: pointer;
-}
-
-.custom {
-    position: relative;
-}
-.customarrow{
-    position: absolute;
-    z-index: 1;
-    width: 14px;
-    height: 14px;
-    border-right: 2px solid var(--bluePrimary);
-    border-bottom: 2px solid var(--bluePrimary);
-    right: 25px;
-    top: 50%;
-    /* bottom: 50%; */
-    transform: rotate(45deg) translateY(-50%);
-    pointer-events: none;
-}
-.custom.active .customarrow{
-    right: 15px;
-    transform: rotate(225deg) translateY(-50%);
-}
 
