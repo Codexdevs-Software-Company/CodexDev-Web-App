@@ -12,6 +12,7 @@ const maxLength = 3;
 
 const rightArr = document.querySelector('#rightarr')
 const leftArr = document.querySelector('#leftarr')
+
 const feedBack = [
     {
         title: "Satisfied App Development client",
@@ -28,37 +29,69 @@ const feedBack = [
 ]
 
 
-
+const mediaquery = window.matchMedia('(max-width: 480px)');
 function moveText(index) {
-    if (index == 0) {
-        saraL.style.translate = "10px";
-        saraL.classList.replace("change", "SaraL");
-        emmak.style.translate = "-5px";
-        emmak.classList.replace("change1", "Emmak");
-        john.style.translate = "6px";
-        john.classList.replace("change", "Emmak")
-        john.classList.replace("change1", "Emmak")
+    if(mediaquery.matches){
+        if (index == 0) {
+            saraL.style.translate = "5px";
+            saraL.classList.replace("change", "SaraL");
+            emmak.style.translate = "-4.5px";
+            emmak.classList.replace("change1", "Emmak");
+            john.style.translate = "6px";
+            john.classList.replace("change", "Emmak")
+            john.classList.replace("change1", "Emmak")
+        } else if (index == 1) {
+            saraL.style.translate = "-8rem";
+            saraL.classList.replace("SaraL", "change");
+            emmak.style.translate = "25rem";
+            emmak.classList.replace("Emmak", "change");
+            emmak.classList.replace("change1", "Emmak");
+            john.style.translate = "-8rem";
+            john.classList.replace("Emmak", "change1");
+            john.classList.replace("change", "change1");
+        } else if (index == 2) {
+            saraL.style.translate = "12rem";
+            saraL.classList.replace("SaraL", "change");
+            emmak.style.translate = "12rem";
+            emmak.classList.replace("change", "change1");
+            emmak.classList.replace("Emmak", "change1");
+            john.style.translate = "-22rem";
+            john.classList.replace("change1", "change");
+            john.classList.replace("Emmak", "change");
+        }
     }
-    else if (index == 1) {
-        saraL.style.translate = "-13.8rem";
-        saraL.classList.replace("SaraL", "change")
-        emmak.style.translate = "35.63rem"
-        emmak.classList.replace("Emmak", "change")
-        emmak.classList.replace("change1", "Emmak")
-        john.style.translate = "-13.8rem"
-        john.classList.replace("Emmak", "change1")
-        john.classList.replace("change", "change1")
+    else{
+        if (index == 0) {
+            saraL.style.translate = "10px";
+            saraL.classList.replace("change", "SaraL");
+            emmak.style.translate = "-5px";
+            emmak.classList.replace("change1", "Emmak");
+            john.style.translate = "6px";
+            john.classList.replace("change", "Emmak")
+            john.classList.replace("change1", "Emmak")
+        }
+        else if (index == 1) {
+            saraL.style.translate = "-13.8rem";
+            saraL.classList.replace("SaraL", "change")
+            emmak.style.translate = "35.63rem"
+            emmak.classList.replace("Emmak", "change")
+            emmak.classList.replace("change1", "Emmak")
+            john.style.translate = "-13.8rem"
+            john.classList.replace("Emmak", "change1")
+            john.classList.replace("change", "change1")
+        }
+        else if (index == 2) {
+            saraL.style.translate = "17.5rem";
+            saraL.classList.replace("SaraL", "change")
+            emmak.style.translate = "15.7rem"
+            emmak.classList.replace("change", "change1")
+            emmak.classList.replace("Emmak", "change1")
+            john.style.translate = "-33.13rem"
+            john.classList.replace("change1", "change")
+            john.classList.replace("Emmak", "change")
+        }
     }
-    else if (index == 2) {
-        saraL.style.translate = "17.5rem";
-        saraL.classList.replace("SaraL", "change")
-        emmak.style.translate = "15.7rem"
-        emmak.classList.replace("change", "change1")
-        emmak.classList.replace("Emmak", "change1")
-        john.style.translate = "-33.13rem"
-        john.classList.replace("change1", "change")
-        john.classList.replace("Emmak", "change")
-    }
+   
 
 }
 function updateText(index) {

@@ -8,14 +8,17 @@ class MyHeader extends HTMLElement {
         this.innerHTML = `
          <header class="header" >
         <div class="logo"><img src="./images/LOGO 1.png" alt="Codex logo"></div>
+        <i class="fa-solid fa-bars hamburgar"></i>
         <nav class="nav">
+        <i class="fa-solid fa-xmark close"></i>
             <ul class="nav-items">
                 <li><a href="./index.html">HOME</a></li>
                 <li><a href="./aboutus.html">ABOUT US</a></li>
                 <li><a href="./index.html#ourTameSectn">OUR TEAM</a></li>
                 <li><a href="./index.html#productsectn">PRODUCTS</a></li>
-                <li><a href="./index.html#servicecrd">SERVICES</a> </li>
-              <i class="fa-solid fa-angle-down down">
+                <li class="sub-menu">
+                <a href="./index.html#servicecrd">SERVICES</a>
+                <i class="fa-solid fa-angle-down down1"> </i>
                     <div class="dropdown">
                         <ul>
                            <li  class="service-link" ><a href="./services.html#social">DEGITAL MARKETING</a></li>
@@ -27,12 +30,11 @@ class MyHeader extends HTMLElement {
                             <li  class="service-link"><a href="./services.html#cloud">CLOUD SERVICES</a></li>
                         </ul>
                     </div>
-                </i>
+                </li>
                   <li><a href="./portfolio.html">PORTFOLIO</a> </li>
                 <button type="button" id="getStarted" class="getStarted">Get Started</button>
-            </ul>
+            </ul
         </nav>
-        
     </header>
      `
     }
@@ -97,11 +99,13 @@ class MyFooter extends HTMLElement {
                 <p>Terms of Service</p>
             </span>
             <div class="socialstop">
+            <div class = "topwrape">
              <div class="wrpsocial">
                 <a href= "https://www.facebook.com/people/Codexdev/61561564619057/" target="_blank"> <i class="fa-brands  fa-facebook-f"></i></a>
                 <a href= "https://www.linkedin.com/company/codexdevs/" target="_blank"> <i class="fa-brands  fa-linkedin-in"></i></a>
               </div>
               <div class="bTop"><a href="#" id"backTop"> <i class="fa-solid fa-angle-down down"></i></a>
+              </div>
               </div>
            </div>
         </div>
@@ -121,12 +125,36 @@ getStarted.forEach((btn)=>{
     })
 });
 
+
 const headerLogo = document.querySelector(".logo");
-headerLogo.style.cursor = "pointer";
-headerLogo.addEventListener("click", () => {
+headerLogo.addEventListener("click",()=>{
+    headerLogo.style.cursor= "pointer"
     location.href = "index.html";
 });
 
+
+
+const hamburgar = document.querySelector(".hamburgar");
+const show = document.querySelector(".close");
+const nav = document.querySelector(".nav")
+hamburgar.addEventListener("click", ()=>{
+   nav.classList.toggle("toggle");
+   show.classList.toggle("show");
+   hamburgar.classList.toggle("hide")
+})
+show.addEventListener("click",()=>{
+    hamburgar.classList.toggle("hide");
+    nav.classList.toggle("toggle");
+    show.classList.toggle("show");
+})
+const links = document.querySelectorAll(".nav-items a");
+links.forEach((link)=>{
+    link.addEventListener("click",()=>{
+        nav.classList.toggle("toggle");
+        hamburgar.classList.remove("hide");
+        show.classList.toggle("show");
+    })
+})
 
 const backTop = document.querySelector('#backTop');
  backTop.addEventListener('click', ()=> {
@@ -134,4 +162,5 @@ const backTop = document.querySelector('#backTop');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   
  });
+
 

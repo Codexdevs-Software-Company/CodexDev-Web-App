@@ -20,6 +20,7 @@
   align-items: center;
 }
 .portfoliotext{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,7 +56,7 @@
 .portfolio #curve{
     position: absolute;
     top: 9rem;
-    right: -6rem;
+    right: 9rem;
     width: 9.312rem;
     height: 24.3rem;
 }
@@ -63,47 +64,52 @@
     width: 1.511rem;
     height: 1.772rem;
     position: absolute;
-    right: -1.4rem;
+    right: 13.5rem;
     top: 30rem;
 }
 .portfolio #leave{
     position: absolute;
     width: 2.98rem;
     height: 2.34rem;
-    top: -1rem;
-    left: 0rem;
+    top: -.6rem;
+    left: 15.8rem;
 }
 .develop{
     width: 100vw;
     padding: 3.63rem 3.4rem 2.63rem 3.4rem;
+    margin-top: 5rem;
+}
+.develop>.devwrap{
+
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1.88rem;
-    margin-top: 6.87rem;
 }
-.develop h1 :first-child{
+.develop>.devwrap h1 :first-child{
     color: var(--bluePrimary);
     font-weight: 400;
     font-size: 4.38rem;
 }
-.develop h1{
+.develop>.devwrap h1{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.develop h1 :nth-child(2){
+.develop>.devwrap h1 :nth-child(2){
     color: var(--blueLight);
     font-weight: 700;
     font-size: 4.38rem;
 }
-.develop h1 :last-child{
+.develop>.devwrap h1 :last-child{
     color: var(--darkGrey);
     font-weight: 900;
     font-size: 4.38rem;
 }
-.develop p{
+.develop>.devwrap p{
     width: 35.88rem;
     color: var(--bluePrimary);
     font-weight: 400;
@@ -143,14 +149,14 @@
 }
 .muclologo{
     width: 100%;
-    height: 19.44rem;
+    height: 100%;
 }
 .muclologo img{
     width: 100%;
     height: 100%;
 }
 .descmusclo{
-    width: 32rem;
+    width: 100%;
     margin-top: 0.94rem;
 }
 .descmusclo img{
@@ -175,22 +181,24 @@
     margin-top: 1.4rem;
 }
 .pharmainfo{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    gap: 2rem;
     align-items: center;
 }
 .pharmainfo>.logopharma{
-   width: 50%;
-   height: 31.9rem;
+    width: 50%;
+    height: 100%;
 }
-.pharmainfo>.logopharma img{
+.pharmainfo>.logopharma>img{
       width: 100%;
       height: 100%;
 }
 .pharmainfo>.descpharma{
     width: 50%;
-    height: 9.1rem;
-    margin-left: 9.7rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 .descpharma p>span{
     font-weight: 800;
@@ -202,22 +210,23 @@
     font-size: 1.9rem;
 }
 .couponinfo{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 2rem;
 }
 .couponinfo>.viewlogo{
     width: 50%;
-    height: 31.9rem;
-    margin-left: 9.7rem;
+    height: 100%;
+ 
 }
 .couponinfo>.viewlogo img{
     width: 100%;
     height: 100%;
 }
-.couponinfo>.couponinfo{
+.couponinfo>.couponinfo1{
     width: 50%;
-    height: 9.1rem;
+   height: 100%;
 }
 .couponinfo p>span{
     font-weight: 800;
@@ -358,4 +367,148 @@
 }
 .feedbck-slider>#rightarr{
     right: -4rem;
+}
+
+@media (max-width:480px) {
+    /* portfolio section */
+    .portfolio{
+        padding: 4rem 2.4rem;
+    }
+    .portfoliotext{
+        width: 100%;
+    }
+    .portfoliotext h1,h2{
+        font-size: 3.4rem;
+    }
+    .portfoliotext>a button{
+        width: 15rem;
+        height: 4rem;
+        font-size: 2.3rem;
+    }
+    .portfolio #leave{
+        top: -1rem ;
+        left: -1.7rem;
+    }
+    .portfolio #curve{
+        width: 5rem;
+        height: 22rem;
+        top: 12rem;
+        right: -1rem;
+    }
+    .portfolio #curvearrow{
+        top: 31rem;
+        right: 1.2rem;
+    }
+    /* portfolio section end*/
+
+    /* Develop section  */
+    .develop{
+        /* border: 1px solid red; */
+        padding: 4rem 2.4rem;
+     }
+     .devwrap>h1{
+        width: 100%;
+       /* border: 1px solid red; */
+     }
+    
+    .develop>.devwrap>h1 :first-child{
+        width: 100%;
+        font-size: 3rem;
+     }
+     .develop>.devwrap>h1 :nth-child(2){
+        width: 100%;
+        font-size: 3rem;
+     }
+     .develop>.devwrap>h1 :last-child{
+       width: 100%;
+        font-size: 3rem;
+     }
+    
+    /* Develop section  end*/
+
+
+    /* Recent project */
+      .recentPrjsts{
+        padding: 4rem 2.4rem;
+      }
+      .recentPrjsts>h1{
+        font-size: 3.4rem;
+      }
+      .recentPrjsts>h1 span{
+        font-size: 3.4rem;
+      }
+    /* Recent project */
+
+    /* muscolo app section  */
+     .muscolodesc{
+        padding: 4rem 2.4rem;
+     }
+    /* muscolo app section  end*/
+
+
+    /*Pharmacare section  */
+    .pharmasection{
+        padding: 3rem 2.4rem;
+        gap: 8rem;
+    }
+    .pharmainfo{
+        flex-direction: column;
+    }
+    .pharmainfo>.logopharma{
+        width: 100%;
+    }
+    .pharmainfo>.descpharma{
+        width: 100%;
+    }
+    .couponinfo{
+        flex-direction: column;
+    }
+    .couponinfo>.couponinfo1{
+        width: 100%;
+    }
+    .couponinfo>.viewlogo{
+        width: 100%;
+    }
+    /*Pharmacare section  */
+
+    /* koria section */
+    .koriasect{
+        padding: 4rem 2.4rem;
+    }
+    .koriasect h1{
+        width: 100%;
+    }
+    .koriasect p{
+        width: 100%;
+    }
+    .koriasect img{
+        width: 100%;
+        height: 100%;
+    }
+    /* koria section end */
+
+
+    /* feedback section */
+    .feedbacksectn{
+        width: 100vw;
+        padding: 1.3rem;
+    }
+    .feedbacksectn>h1{
+        font-size: 2.2rem;
+        display: flex;
+    }
+    .feedbck-slider{
+        width: 100%;
+    }
+    .feedbck-prsons{
+        width: 100%;
+    }
+    .feedbck-slider>#leftarr{
+       left: -1rem;
+    }
+    .feedbck-slider>#rightarr{
+        right: -1rem;
+    }
+    /* feedback section  end */
+
 }

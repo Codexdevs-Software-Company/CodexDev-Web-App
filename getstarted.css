@@ -14,11 +14,12 @@
 }
 
 .converstnsctn {
+    width: 100vw;
     padding: 5.63rem 0 8.63rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2.5re;
+    gap: 2.5rem;
 }
 
 .converstnsctn>.shapefutre>h1 {
@@ -73,13 +74,15 @@
 }
 
 .contactform1 {
+    position: relative;
+    width: 100vw;
     display: flex;
     justify-content: center;
-    padding: 5.63rem 0rem 8.63rem;
+    padding: 2.63rem 0rem 8.63rem;
 }
 
 .contactform1>.formcard {
-    padding: 2rem 2rem;
+    padding: 1.5rem 2rem;
     border: 1px solid var(--bluePrimary);
     border-radius: 0.75rem;
     width: 73.75rem;
@@ -104,9 +107,8 @@
 }
 
 .contactform1>.formcard>.formfileds {
-    width: 100%;
-    padding: 0 1rem;
-    margin-top: 80px;
+    width: 100%; 
+    margin-top: 5rem;
 }
 
 .contactform1>.formcard>.formfileds>form {
@@ -114,6 +116,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 140px;
 }
 
@@ -126,7 +129,7 @@ form>.wrapfields {
 
 form>button {
     width: 37.5rem;
-    height: 3.75;
+    height: 3.75rem;
     background-color: var(--blueLight);
     padding: 0.625rem 0.625rem;
     font-weight: 400;
@@ -181,4 +184,77 @@ form label {
     outline: 1px solid var(--bluePrimary);
 }
 
+@media (max-width:480px) {
+    /* Conversation section  */
+    .converstnsctn{
+        padding: 2rem 2.4rem 2rem;
+    }
+    .converstnsctn>.shapefutre>h1{
+        font-size: 2.37rem;
+        width: 100%;
+    }
+    .line4{
+        width: 100%;
+        border-top: 1px solid var(--bluePrimary);;
+    }
+    .converstnsctn>.shapefuturedesc{
+        width: 100%;
+    }
+    .converstnsctn>.shapefuturedesc>p{
+        width: 100%;
+        text-align: justify;
+    }
+    .converstnsctn>.contacts{
+        width: 100%;
+    }
+    .converstnsctn>.contacts>address{
+        flex-direction: column;
+        gap: 1rem;
+        
+    }
+    .converstnsctn>.contacts>address>a{
+        display: flex;
+        align-items: center; 
+    }
+    /* Conversation section end */
 
+    /* form section  */
+     .contactform1{
+        padding: 4rem 2.4rem;
+     }
+     .contactform1>.formcard{
+        width: 100%;
+        height: 100%;
+        padding: 1rem 1.5rem;
+     }  
+     .contactform1>.formcard>.formfileds{
+        width: 100%;
+        height: 100%;
+     }
+     .contactform1>.formcard>.formfileds>form{
+        width: 100%;
+        height: 100%;
+        gap: 3rem;
+     }
+     form>.wrapfields{
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        gap: 1rem;
+     }
+     .labels{
+        width: 100%;
+        gap: 1rem;
+     }
+     form>button{
+        width: 100%;
+        
+     }
+     .formfileds>form>.wrapfields>.textfileds .fields{
+        width: 100%;
+     }
+     .labels>#message {
+       height: 10rem;
+    }
+    /* form section  end */
+}
