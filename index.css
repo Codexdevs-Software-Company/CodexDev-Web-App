@@ -43,6 +43,7 @@ body{
 }
 .logo {
     margin: 1.36rem 0 0 3.13rem;
+    cursor: pointer;
 }
 .logo>img{
     width: 6.062rem;

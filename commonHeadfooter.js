@@ -128,7 +128,6 @@ getStarted.forEach((btn)=>{
 
 const headerLogo = document.querySelector(".logo");
 headerLogo.addEventListener("click",()=>{
-    headerLogo.style.cursor= "pointer"
     location.href = "index.html";
 });
 
