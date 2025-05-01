@@ -47,11 +47,11 @@
         </address>
       </div>
     </div>
-   <!-- Conversation section End-->
+    <!-- Conversation section End-->
 
 
 
-   <!-- Contact form -->
+    <!-- Contact form -->
     <div class="contactform1">
       <div class="formcard">
         <h3>SEND US A MESSAGE</h3>
@@ -61,22 +61,35 @@
               <div class="textfileds">
                 <div class="labels">
                   <label for="name">Name:</label>
-                  <input type="text" id="name" class="fields" maxlength="35">
+                  <input type="text" id="name" class="fields" maxlength="35" attern="[A-Z a-z\s]" required>
                 </div>
                 <div class="labels">
                   <label for="email">Email:</label>
-                  <input type="email" id="email" class="fields" maxlength="60">
+                  <input type="email" id="email" class="fields" maxlength="60" required>
                 </div>
                 <div class="labels">
-                  
                   <label for="subject">Subject</label>
+                  <div class="select-box">
+                    <div class="select-options">
+                      <input type="text" placeholder="Select a service" readonly required>
+                    </div>
+                    <ul class="options">
+                      <li class="option">Software development</li>
+                      <li class="option">App development</li>
+                      <li class="option">Web development</li>
+                      <li class="option">Digital marketing</li>
+                      <li class="option">Product designing</li>
+                      <li class="option">Graphic designing</li>
+                      <li class="option">Cloud services</li>
+                    </ul>
+                  </div>
                 </div>
 
               </div>
               <div class="texarea">
                 <div class="labels">
                   <label for="message">Message:</label>
-                  <textarea id="message" rows="10" cols="30" class="fields"></textarea>
+                  <textarea id="message" rows="10" cols="30" class="fields" required></textarea>
                 </div>
               </div>
             </div>
@@ -86,7 +99,7 @@
       </div>
     </div>
   </div>
-   <!-- Contact form end -->
+  <!-- Contact form end -->
 
   <!-- main section end-->
   <!-- footer -->

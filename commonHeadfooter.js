@@ -18,7 +18,7 @@ class MyHeader extends HTMLElement {
                 <li><a href="./index.html#productsectn">PRODUCTS</a></li>
                 <li class="sub-menu">
                 <a href="./index.html#servicecrd">SERVICES</a>
-                <i class="fa-solid fa-angle-down down1"> </i>
+                <i class="fa-solid fa-angle-down down1"></i>
                     <div class="dropdown">
                         <ul>
                            <li  class="service-link" ><a href="./services.html#social">DEGITAL MARKETING</a></li>
@@ -155,6 +155,19 @@ links.forEach((link)=>{
         show.classList.toggle("show");
     })
 })
+
+const down1 = document.querySelector(".sub-menu>.fa-angle-down");
+    down1.addEventListener("click", ()=>{
+        down1.classList.toggle("active2")
+    })
+document.addEventListener("click",(e)=>{
+    if(!down1.contains(e.target)){
+        down1.classList.remove("active2");
+    }
+})
+
+
+
 
 const backTop = document.querySelector('#backTop');
  backTop.addEventListener('click', ()=> {

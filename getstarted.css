@@ -76,9 +76,11 @@
 .contactform1 {
     position: relative;
     width: 100vw;
+    height: 65rem;
     display: flex;
     justify-content: center;
     padding: 2.63rem 0rem 8.63rem;
+
 }
 
 .contactform1>.formcard {
@@ -86,7 +88,7 @@
     border: 1px solid var(--bluePrimary);
     border-radius: 0.75rem;
     width: 73.75rem;
-    height: 44.56rem;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,7 +97,7 @@
 
 .contactform1>.formcard:hover {
     box-shadow: 0px 4px 15px 5px #3666AB60;
-    transform: scale(1.01);
+    transform: scale(1.003);
     transition: all 0.5s ease;
 }
 
@@ -108,11 +110,13 @@
 
 .contactform1>.formcard>.formfileds {
     width: 100%; 
-    margin-top: 5rem;
+    height: 100%;
+    margin-top: 2rem;
 }
 
 .contactform1>.formcard>.formfileds>form {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -139,7 +143,7 @@ form>button {
     border-radius: 8px;
     margin-bottom: 50px;
     cursor: pointer;
-   transition: background-color 0.5s ease-out;;
+    transition: background-color 0.5s ease-out;;
 }
 form>button:hover{
     background-color: var(--bluePrimary);
@@ -150,6 +154,7 @@ form label {
     font-weight: 500;
     font-size: 1.5rem;
     color: var(--bluePrimary);
+    z-index: -70;
 }
 
 .formfileds>form>.wrapfields>.textfileds {
@@ -165,9 +170,13 @@ form label {
     gap: 5px;
 }
 
+
 .labels>#message {
     background-color: #3B506D0D;
     resize: none;
+    padding: .5rem;
+    color: var(--blueLight);
+    font-size: 1rem;
 }
 
 .formfileds>form>.wrapfields>.textfileds .fields {
@@ -178,12 +187,95 @@ form label {
     border-radius: 4px;
     background-color: #3B506D0D;
     outline: none;
+    color: var(--blueLight);
+    font-size: 1rem;
 }
 
 .formfileds>form>.wrapfields .fields:focus {
     outline: 1px solid var(--bluePrimary);
 }
 
+.select-box{
+    width: 26.3rem;
+    height: 3.41rem;
+    z-index: 100;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+.select-options{
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+.select-options::after{
+    position: absolute;
+    content: '';
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-90%) rotate(45deg);
+    width: .8rem;
+    height: .8rem;
+    border-right: 1px solid var(--blueLight);
+    border-bottom: 1px solid var(--blueLight);
+    transition: all 0.5s ease-in-out;
+}
+.select-options.active::after{
+    transform: translateY(-60%) rotate(226deg);
+}
+.select-options>input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--blueLight);
+    border-radius:4px;
+    outline: none;
+    padding: 1rem;
+    background-color: #3B506D0D;
+    transition: all 0.5s ease-in-out;
+    color: var(--blueLight);
+    font-size: 1rem;
+    
+}
+.select-options>input:focus{
+    outline: 1px solid var(--bluePrimary);
+}
+.select-options>input::placeholder{
+    font-size: 1.2rem;
+    color: var(--blueLight);
+}
+.contactform1>.formcard:hover .select-options>input[placeholder]{
+    transform: scale(1.003);
+}
+.select-box>.options{
+    width: 100%;
+    height: 0;
+    z-index: 200;
+    background-color: rgba(211, 211, 211, 1);
+    margin-top: .5rem;
+    border-radius: 5px;
+    list-style: none;
+    opacity: 1;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+.select-options.active + .options{
+    height: 20.31rem;
+}
+.select-box>.options .option{
+    width: 100%;
+    padding: .7rem;
+    font-size: 1.2rem;
+    opacity: .7;
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+    transition: all 0.3s ease;
+}
+.select-box>.options .option:not(:nth-of-type){
+    border-bottom: none;
+}
+.select-box>.options .option:hover{
+  color: var(--bluePrimary);
+  font-weight: 500;
+  opacity: 1;
+}
 @media (max-width:480px) {
     /* Conversation section  */
     .converstnsctn{
@@ -248,7 +340,7 @@ form label {
      }
      form>button{
         width: 100%;
-        
+        margin-top: 5rem;
      }
      .formfileds>form>.wrapfields>.textfileds .fields{
         width: 100%;
@@ -256,5 +348,6 @@ form label {
      .labels>#message {
        height: 10rem;
     }
+   
     /* form section  end */
 }

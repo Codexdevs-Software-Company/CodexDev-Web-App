@@ -504,10 +504,10 @@
         width: 100%;
     }
     .feedbck-slider>#leftarr{
-       left: -1rem;
+       left: -.8rem;
     }
     .feedbck-slider>#rightarr{
-        right: -1rem;
+        right: -.8rem;
     }
     /* feedback section  end */
 

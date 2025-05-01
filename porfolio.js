@@ -35,7 +35,7 @@ function moveText(index) {
         if (index == 0) {
             saraL.style.translate = "5px";
             saraL.classList.replace("change", "SaraL");
-            emmak.style.translate = "-4.5px";
+            emmak.style.translate = "-4px";
             emmak.classList.replace("change1", "Emmak");
             john.style.translate = "6px";
             john.classList.replace("change", "Emmak")
@@ -50,12 +50,12 @@ function moveText(index) {
             john.classList.replace("Emmak", "change1");
             john.classList.replace("change", "change1");
         } else if (index == 2) {
-            saraL.style.translate = "12rem";
+            saraL.style.translate = "11rem";
             saraL.classList.replace("SaraL", "change");
-            emmak.style.translate = "12rem";
+            emmak.style.translate = "10.5rem";
             emmak.classList.replace("change", "change1");
             emmak.classList.replace("Emmak", "change1");
-            john.style.translate = "-22rem";
+            john.style.translate = "-23rem";
             john.classList.replace("change1", "change");
             john.classList.replace("Emmak", "change");
         }

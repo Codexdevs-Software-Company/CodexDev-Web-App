@@ -129,13 +129,15 @@ body{
     cursor: pointer;
     opacity: 0.7;
     font-size: 1.2rem;
-    pointer-events: none;
+ 
 }
-
+.down1.active2{
+    transform: rotate(182deg);
+}
 .down1:hover {
     opacity: 1;
 }
-.nav-items>.sub-menu .dropdown {
+.nav-items>.sub-menu>.down1 + .dropdown {
     max-height: 0rem;
     visibility: hidden;
     position: absolute;
@@ -150,9 +152,10 @@ body{
     z-index: 1;
     transition: all 0.3s linear; 
 }
-.nav-items>.sub-menu:hover .dropdown{
- transition: all 0.3s linear;    
- visibility: visible;
+
+.nav-items>.sub-menu>.down1.active2 + .dropdown{
+  transition: all 0.3s linear;    
+  visibility: visible;
   opacity: 1;
   max-height: 18.875rem;
 }
@@ -960,7 +963,7 @@ body{
         margin-top: 1rem;
         left: 0;
     }
-    .nav-items>.sub-menu:hover .dropdown{
+    .nav-items>.sub-menu>.down1 + .dropdown{
         position: static;
     }
     .nav-items>#getStarted{
